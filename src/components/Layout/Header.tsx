@@ -17,9 +17,8 @@ const Header = () => {
       </div>
       <nav className="flex-x space-x-1 py-2 hidden md:flex">
         {navLinks.map((links) => (
-          <div className="relative">
+          <div className="relative" key={links.route}>
             <Link
-              key={links.route}
               href={links.route}
               onClick={() => {
                 active == links.route ? setActive("") : setActive(links.route);
@@ -40,6 +39,7 @@ const Header = () => {
               <nav className="flex flex-col absolute top-16 w-60 bg-white shadow-lg shadow-gray-100 rounded-lg">
                 {links.sub?.map((sub) => (
                   <Link
+                    key={sub.route}
                     href={sub.route}
                     className="hover:bg-gray-100 py-3 px-5"
                   >
