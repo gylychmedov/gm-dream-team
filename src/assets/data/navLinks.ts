@@ -23,20 +23,12 @@ export const navLinks: INavLink[] = [
         route: "/consultation",
       },
       {
-        name: "Courses",
-        route: "/courses",
-      },
-      {
         name: "M&E",
         route: "/m_e",
       },
       {
-        name: "Turnkey",
+        name: "Turnkey services",
         route: "/turnkey",
-      },
-      {
-        name: "Grant Managment",
-        route: "/grant_managment",
       },
     ],
   },

@@ -42,8 +42,9 @@ const ContactPage = () => {
             <h2 className="mb-2 font-lato-bold text-gray-900 text-lg">
               Email Us
             </h2>
-            <div className="text-gray-600">support@example.com</div>
-            <div className="text-gray-600">support@example.com</div>
+            <div className="text-gray-600 w-full text-center break-words">
+              grantmanagementdreamteam@gmail.com
+            </div>
           </aside>
           <aside className="bg-white flex-center px-4 py-6 lg:p-10 flex-col rounded-lg shadow-xl shadow-gray-100 group-hover:blur hover:!blur-0 group-hover:scale-90 hover:!scale-110 duration-500 cursor-default">
             <div className="bg-orange-500/10 w-14 h-14 flex-center rounded-full text-orange-500 mb-5">
