@@ -18,21 +18,21 @@ const AboutPage = () => {
             </span>
           </header>
           <article className="border-l-2 pl-5 border-pink-650 text-teal-850">
-            The "GM-dream team" is the pioneering grant agency in Central Asia,
-            dedicated to empowering the civil society sector and driving
-            positive change within local communities. The agency's mission is to
-            train young leaders in the field of grant management, equipping them
-            with the knowledge and skills necessary to meet the requirements of
-            grantor organizations throughout the entire grant lifecycle.
-            Unfortunately, many local youths are unaware of the vast career
-            opportunities in grant management due to a lack of information.
-            Professions such as grant writer, grant project manager, monitoring
-            and evaluation (M&E) expert, financial consultant, and head of a
-            civil society organization hold immense appeal for professionals
-            seeking flexible working hours, remote work options, the ability to
-            select clients and projects based on their interests, and the
-            opportunity to bring their own ideas to life while contributing to
-            local community development.
+            The &quot;GM-dream team&quot; is the pioneering grant agency in
+            Central Asia, dedicated to empowering the civil society sector and
+            driving positive change within local communities. The agency's
+            mission is to train young leaders in the field of grant management,
+            equipping them with the knowledge and skills necessary to meet the
+            requirements of grantor organizations throughout the entire grant
+            lifecycle. Unfortunately, many local youths are unaware of the vast
+            career opportunities in grant management due to a lack of
+            information. Professions such as grant writer, grant project
+            manager, monitoring and evaluation (M&E) expert, financial
+            consultant, and head of a civil society organization hold immense
+            appeal for professionals seeking flexible working hours, remote work
+            options, the ability to select clients and projects based on their
+            interests, and the opportunity to bring their own ideas to life
+            while contributing to local community development.
           </article>
           <Link
             href="/courses"
