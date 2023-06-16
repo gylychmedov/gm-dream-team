@@ -18,21 +18,25 @@ const AboutPage = () => {
             </span>
           </header>
           <article className="border-l-2 pl-5 border-pink-650 text-teal-850">
-            The &quot;GM-Dream Team&quot; is the pioneering grant agency in
-            Central Asia, dedicated to empowering the civil society sector and
-            driving positive change within local communities. The agency's
-            mission is to train young leaders in the field of grant management,
-            equipping them with the knowledge and skills necessary to meet the
-            requirements of grantor organizations throughout the entire grant
-            lifecycle. Unfortunately, many local youths are unaware of the vast
-            career opportunities in grant management due to a lack of
-            information. Professions such as grant writer, grant project
-            manager, monitoring and evaluation (M&E) expert, financial
-            consultant, and head of a civil society organization hold immense
-            appeal for professionals seeking flexible working hours, remote work
-            options, the ability to select clients and projects based on their
-            interests, and the opportunity to bring their own ideas to life
-            while contributing to local community development.
+            The "GM-Dream Team" is the pioneering grant agency in Central Asia,
+            dedicated to empowering the civil society sector and driving
+            positive change within local communities. The agency's mission is to
+            train young leaders in the field of grant management, equipping them
+            with the knowledge and skills necessary to meet the requirements of
+            grantor organizations throughout the entire grant lifecycle.
+          </article>
+          <article className="border-l-2 pl-5 border-pink-650 text-teal-850 mt-3">
+            Guncha Komekova, the founder of the "GM-Dream Team" grant agency,
+            brings fifteen years of experience coordinating grant programs at
+            the donor's organization. Guncha imparts her knowledge to the next
+            generation of grant experts. Her team's focus includes M&E of grant
+            projects, audience analysis, composing comprehensive grant packages,
+            and overseeing the grant management process in compliance with grant
+            policies. Guncha recognizes the agency's primary role in attracting
+            youth to the field by promoting grant management professions. These
+            experts will play a pivotal role in providing civil society actors
+            with the necessary resources to strengthen their work and address
+            the priorities of their communities.
           </article>
           <Link
             href="/courses"
@@ -161,7 +165,7 @@ const AboutPage = () => {
           </div>
         </article>
 
-        <section className="col-span-12">
+        {/* <section className="col-span-12">
           <header className="flex flex-col pt-10 pb-8 items-center">
             <span className="text-teal-850 font-bold">SKILLED INSTRUCTOR</span>
             <span className="text-gray-900 font-bold text-3xl mt-3">
@@ -169,7 +173,7 @@ const AboutPage = () => {
             </span>
           </header>
           <Team />
-        </section>
+        </section> */}
       </main>
     </Layout>
   );
