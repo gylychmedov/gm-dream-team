@@ -18,7 +18,7 @@ const AboutPage = () => {
             </span>
           </header>
           <article className="border-l-2 pl-5 border-pink-650 text-teal-850">
-            The &quot;GM-dream team&quot; is the pioneering grant agency in
+            The &quot;GM-Dream Team&quot; is the pioneering grant agency in
             Central Asia, dedicated to empowering the civil society sector and
             driving positive change within local communities. The agency's
             mission is to train young leaders in the field of grant management,
@@ -38,13 +38,13 @@ const AboutPage = () => {
             href="/courses"
             className="flex-x mt-7 hover:scale-105 duration-500 bg-pink-650 px-5 py-3 text-base text-white rounded-md font-lato-bold shadow-xl shadow-pink-650/10"
           >
-            <span>Explorer courses</span>
+            <span>Explore courses</span>
             <BsArrowRight />
           </Link>
         </section>
 
         <article className="col-span-12">
-          <div className="relative bg-teal-850 border-l-4 border-pink-650 rounded-lg shadow-lg shadow-teal-850/30 p-5 overflow-hidden">
+          <div className="relative bg-pink-850/5 border-l-4 border-pink-650 rounded-lg shadow-lg shadow-pink-850/10 p-5 overflow-hidden">
             <svg
               className="absolute top-0 right-0"
               width="158"
@@ -113,10 +113,10 @@ const AboutPage = () => {
               <div className="text-xs font-bold uppercase text-pink-650 tracking-widest mb-2">
                 About us
               </div>
-              <h3 className="text-2xl font-extrabold text-indigo-50 leading-snug mb-2">
+              <h3 className="text-2xl font-extrabold text-pink-650 mb-2">
                 GM-Dream Team
               </h3>
-              <p className="text-gray-300">
+              <p className="text-gray-900">
                 The "GM-Dream Team" aims to promote these professions among
                 young people and provide comprehensive training in each role.
                 These young grant experts will possess the agility to respond
@@ -131,8 +131,8 @@ const AboutPage = () => {
                 even become trainers in the field of grant management.
               </p>
 
-              <p className="text-gray-300 mt-4">
-                Guncha Komekova, the founder of the "GM-dream team" grant
+              <p className="text-gray-900 mt-4">
+                Guncha Komekova, the founder of the "GM-Dream Team" grant
                 agency, brings fifteen years of experience coordinating grant
                 programs at the donor's organization. Guncha imparts her
                 knowledge to the next generation of grant experts, she trained
@@ -148,9 +148,9 @@ const AboutPage = () => {
                 communities.
               </p>
 
-              <p className="text-gray-300 mt-4">
+              <p className="text-gray-900 mt-4">
                 In addition to its training and consultation services, the
-                "GM-dream team" grant agency also provides coaching on turnkey
+                "GM-Dream Team" grant agency also provides coaching on turnkey
                 grant management to organizations seeking comprehensive support
                 throughout the entire grant process. These turnkey services
                 offer a seamless and efficient approach, relieving organizations
