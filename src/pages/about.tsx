@@ -14,7 +14,7 @@ const AboutPage = () => {
           <img
             src="https://img.freepik.com/free-photo/mature-lawyer-pointing-signature-place-contract-document-with-pen_23-2147898521.jpg?w=740&t=st=1687043430~exp=1687044030~hmac=1177df0c261944dadba8de6680e79a73498560cb4a4f904986c125afec6bde74"
             alt=""
-            className="w-full h-96 object-cover rounded-xl"
+            className="w-full h-96 object-cover rounded-xl mt-10"
           />
         </section>
         <section className="col-span-12 md:col-span-6 flex items-start flex-col">
