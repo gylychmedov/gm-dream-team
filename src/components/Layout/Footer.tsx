@@ -20,8 +20,7 @@ const Footer = () => {
             </div>
 
             <p className="mt-5 max-w-xs text-gray-200">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse non
-              cupiditate quae nam molestias.
+              Build Bridges, Make a Difference as a Grant Expert!
             </p>
           </div>
 
