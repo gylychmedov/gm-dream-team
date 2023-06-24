@@ -1,13 +1,5 @@
 import Layout from "@/components/Layout/Layout";
-import Services from "@/components/Services/Services";
-import { useState } from "react";
-
-const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
-];
+import { GiHeartKey } from "react-icons/gi";
 
 const TurnkeyPage = () => {
   return (
@@ -33,8 +25,9 @@ const TurnkeyPage = () => {
         </div>
         <div className="mx-auto max-w-5xl py-32 sm:py-20 lg:py-36 px-3 sm:px-5">
           <div className="">
-            <h1 className="text-center text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Turnkey services
+            <h1 className="text-center flex-center space-x-6 text-4xl font-bold tracking-tight text-white sm:text-6xl">
+              <img src="/key.png" className="w-20" alt="key" />
+              <span>Turnkey services</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Turnkey Grant Management Services: Simplifying the Funding Process
@@ -74,7 +67,7 @@ const TurnkeyPage = () => {
             </p>
 
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Upon successful grant awards, the "GM-dream team" continues to
+              Upon successful grant awards, the "GM-Dream Team" continues to
               support the organization through coaching the organization's grant
               management team on the efficient grant project management
               throughout the entire grant lifecycle. This includes setting up
@@ -95,7 +88,7 @@ const TurnkeyPage = () => {
             </p>
 
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              By offering turnkey grant management services, the "GM-dream team"
+              By offering turnkey grant management services, the "GM-Dream Team"
               grant agency becomes a valuable partner for organizations looking
               to maximize their chances of securing grants and effectively
               managing them. This comprehensive approach provides support at
