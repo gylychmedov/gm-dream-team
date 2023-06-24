@@ -1,33 +1,14 @@
 import Layout from "@/components/Layout/Layout";
 
-// const ContactPage = () => {
-//   return (
-//     <Layout title="Contact">
-
-//       <main className="grid grid-cols-12 gap-3 md:pt-5 md:pb-10 lg:gap-10 contain">
-//         <header className="col-span-12 flex-center py-10  flex-center flex-col">
-//           <span className="text-teal-850 font-bold">NEED HELP?</span>
-//           <span className="text-gray-900 font-bold text-3xl mt-3">
-//             Get in Touch with us?
-//           </span>
-//         </header>
-
-//         {/* <section className="col-span-12 md:col-span-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-3 lg:gap-5 group"></section>
-//         <section className="col-span-12 md:col-span-6 flex flex-col space-y-4"></section> */}
-//       </main>
-//     </Layout>
-//   );
-// };
-
 const ConsultationPage = () => {
   return (
-    <Layout title="Consultation" className="relative bg-white">
+    <Layout title="Consultation" className="relative z-0 bg-white">
       <main className="grid grid-cols-12 contain  overflow-hidden py-10">
         <section className="col-span-12 lg:col-span-6">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h1 className="mt-24 text-4xl font-bold tracking-tight text-gray-900 sm:mt-10 sm:text-6xl">
+            <h2 className="mt-24 text-2xl font-bold tracking-tight text-gray-900 sm:mt-10">
               Data to enrich your online business
-            </h1>
+            </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
               lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat

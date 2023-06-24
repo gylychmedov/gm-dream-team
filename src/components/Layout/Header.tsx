@@ -41,33 +41,59 @@ const Header = () => {
         <nav className="flex-x space-x-1 hidden md:flex">
           {navLinks.map((links) => (
             <div className="relative" key={links.route}>
-              <Link
-                href={links.route}
-                onClick={() => {
-                  active == links.route
-                    ? setActive("")
-                    : setActive(links.route);
-                }}
-                className={`${
-                  route.pathname == links.route
-                    ? "border-pink-650 text-pink-650"
-                    : " border-transparent"
-                } flex-x justify-between py-4 px-5 font-medium  border-b-2 hover:border-pink-650 hover:text-pink-650 duration-300`}
-              >
-                <span className="whitespace-nowrap text-base">
-                  {links.name}
-                </span>
-                {links.sub && (
-                  <BiChevronDown
-                    className={`${
-                      active == links.route && "-rotate-90"
-                    } duration-500`}
-                  />
-                )}
-              </Link>
+              {links.route == "#" ? (
+                <div
+                  onClick={() => {
+                    active == links.route
+                      ? setActive("")
+                      : setActive(links.route);
+                  }}
+                  className={`${
+                    route.pathname == links.route
+                      ? "border-pink-650 text-pink-650"
+                      : "border-transparent"
+                  } flex-x justify-between py-4 cursor-pointer px-5 font-medium  border-b-2 hover:border-pink-650 hover:text-pink-650 duration-300`}
+                >
+                  <span className="whitespace-nowrap text-base">
+                    {links.name}
+                  </span>
+                  {links.sub && (
+                    <BiChevronDown
+                      className={`${
+                        active == links.route && "-rotate-90"
+                      } duration-500`}
+                    />
+                  )}
+                </div>
+              ) : (
+                <Link
+                  href={links.route}
+                  onClick={() => {
+                    active == links.route
+                      ? setActive("")
+                      : setActive(links.route);
+                  }}
+                  className={`${
+                    route.pathname == links.route
+                      ? "border-pink-650 text-pink-650"
+                      : "border-transparent"
+                  } flex-x justify-between py-4 px-5 font-medium  border-b-2 hover:border-pink-650 hover:text-pink-650 duration-300`}
+                >
+                  <span className="whitespace-nowrap text-base">
+                    {links.name}
+                  </span>
+                  {links.sub && (
+                    <BiChevronDown
+                      className={`${
+                        active == links.route && "-rotate-90"
+                      } duration-500`}
+                    />
+                  )}
+                </Link>
+              )}
 
               {active == links.route && (
-                <nav className="flex flex-col absolute top-16 w-60 bg-white shadow-lg shadow-gray-100 rounded-lg">
+                <nav className="flex flex-col absolute z-20 top-16 w-60 bg-white shadow-lg overflow-hidden shadow-gray-100 rounded-lg">
                   {links.sub?.map((sub) => (
                     <Link
                       key={sub.route}
