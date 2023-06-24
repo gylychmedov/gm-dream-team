@@ -3,7 +3,7 @@ import Layout from "@/components/Layout/Layout";
 const ConsultationPage = () => {
   return (
     <Layout title="Consultation" className="relative z-0 bg-white">
-      <main className="grid grid-cols-12 contain  overflow-hidden py-10">
+      {/* <main className="grid grid-cols-12 contain  overflow-hidden py-10">
         <section className="col-span-12 lg:col-span-6">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="mt-24 text-2xl font-bold tracking-tight text-gray-900 sm:mt-10">
@@ -37,7 +37,7 @@ const ConsultationPage = () => {
             alt=""
           />
         </section>
-      </main>
+      </main> */}
     </Layout>
   );
 };
