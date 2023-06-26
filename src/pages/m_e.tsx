@@ -3,20 +3,13 @@ import Link from "next/link";
 
 export default function ConsultationPage() {
   return (
-    <Layout title="Consultation" className="py-24 sm:py-32 relative isolate">
-      <img
-        src="https://images.unsplash.com/photo-1562564055-71e051d33c19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-        // src="https://images.unsplash.com/photo-1462899006636-339e08d1844e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
-        alt=""
-        className="absolute inset-0 -z-10 h-full w-full object-cover"
-      />
-      <div className="absolute inset-0 -z-10 h-full w-full object-cover bg-blue-850 bg-opacity-70"></div>
+    <Layout title="Consultation" className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-          <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl text-center">
+          <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Grant Management Consultation
           </h1>
-          <div className="mt-10 grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-white lg:max-w-none lg:grid-cols-2">
+          <div className="mt-10 grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-gray-700 lg:max-w-none lg:grid-cols-2">
             <div>
               <p>Welcome to our Grant Management Consultation Services!</p>
               <p className="mt-8">
@@ -112,17 +105,17 @@ export default function ConsultationPage() {
               </p>
             </div>
           </div>
-          {/* <div className="mt-10 flex">
+          <div className="mt-10 flex">
             <Link
               href="/contact"
               className="rounded-md bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Contact us
             </Link>
-          </div> */}
+          </div>
         </div>
       </div>
-      {/* <div className="relative overflow-hidden pt-16 lg:pt-20">
+      <div className="relative overflow-hidden pt-16 lg:pt-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <img
             className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10"
@@ -130,10 +123,10 @@ export default function ConsultationPage() {
             alt=""
           />
           <div className="relative" aria-hidden="true">
-            <div className="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-blue-850 pt-[7%]" />
+            <div className="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]" />
           </div>
         </div>
-      </div> */}
+      </div>
     </Layout>
   );
 }
