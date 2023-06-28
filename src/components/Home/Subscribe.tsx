@@ -11,8 +11,7 @@ export default function Subscribe() {
               Subscribe to our newsletter.
             </h2>
             <p className="mt-4 text-lg leading-8 text-gray-400">
-              Nostrud amet eu ullamco nisi aute in ad minim nostrud adipisicing
-              velit quis. Duis tempor incididunt dolore.
+              Subscribe to us to keep up to date with our news
             </p>
             <div className="mt-6 flex max-w-md gap-x-4">
               <label htmlFor="email-address" className="sr-only">
@@ -47,8 +46,7 @@ export default function Subscribe() {
                 Weekly articles
               </dt>
               <dd className="mt-2 leading-7 text-gray-400">
-                Non laboris consequat cupidatat laborum magna. Eiusmod non irure
-                cupidatat duis commodo amet.
+                We will send weekly updates to your email address
               </dd>
             </div>
             <div className="flex flex-col items-start">
@@ -60,8 +58,7 @@ export default function Subscribe() {
               </div>
               <dt className="mt-4 font-semibold text-gray-700">No spam</dt>
               <dd className="mt-2 leading-7 text-gray-400">
-                Officia excepteur ullamco ut sint duis proident non adipisicing.
-                Voluptate incididunt anim.
+                We will not send you any spam emails
               </dd>
             </div>
           </dl>
