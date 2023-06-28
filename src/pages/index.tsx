@@ -1,4 +1,6 @@
 import Courses from "@/components/Courses/Courses";
+import Banner from "@/components/Home/Banner";
+import Subscribe from "@/components/Home/Subscribe";
 import Layout from "@/components/Layout/Layout";
 import Head from "next/head";
 
@@ -11,7 +13,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout title="Home">
+        <Banner />
         <Courses />
+        <Subscribe />
       </Layout>
     </>
   );
