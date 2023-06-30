@@ -28,7 +28,7 @@ const Header = () => {
       <div ref={loaderRef} className="hidden">
         <LoaderFullscreen />
       </div>
-      <header className="flex-x justify-between bg-white px-4 relative">
+      <header className="flex-x justify-between bg-white px-4 sticky top-0  z-20">
         <img
           src="/logo.svg"
           className="w-9 cursor-pointer  hover:scale-110 duration-500"
