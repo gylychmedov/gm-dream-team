@@ -49,8 +49,8 @@ const TurnkeyPage = () => {
               crucial aspects of the grant lifecycle, including organizations'
               training on a grant management process. This includes conducting
               thorough research to identify suitable funding opportunities that
-              align with the organization's goals and priorities. The "GM-dream
-              team" leverages its expertise and extensive network to identify
+              align with the organization's goals and priorities. The "GM-Dream
+              Team" leverages its expertise and extensive network to identify
               relevant grantor organizations and funding sources that are most
               likely to support the organization's project ideas.
             </p>

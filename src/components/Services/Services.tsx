@@ -1,5 +1,7 @@
+import Link from "next/link";
 import { AiOutlineTeam } from "react-icons/ai";
-import { HiOutlineDocumentText } from "react-icons/hi2";
+import { BsArrowRight } from "react-icons/bs";
+import { HiArrowLongRight, HiOutlineDocumentText } from "react-icons/hi2";
 import { RiKey2Line } from "react-icons/ri";
 
 export default function Services() {
@@ -14,41 +16,71 @@ export default function Services() {
             </span>
           </header>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="p-5 md:p-7 xl:p-10 bg-white border border-white shadow-sm rounded-lg transition hover:border-blue-600">
+            <Link
+              href={"/consultation"}
+              className="group p-5 md:p-7 xl:p-10 bg-white border border-white shadow-sm rounded-lg transition hover:border-blue-600 hover:bg-blue-50 duration-500"
+            >
               <AiOutlineTeam size={46} className="text-blue-600 mb-2" />
               <h4 className="text-lg font-bold mb-2">1. Consultation</h4>
-              <p className="leading-relaxed text-gray-600 ">
+              <p className="leading-relaxed text-gray-600 line-clamp-6 ">
                 At the GM-Dream Team we understand that managing grants can be a
                 complex and challenging task. Whether you are a nonprofit
                 organization, a research institution, or a private entity,
                 securing and effectively managing grants is crucial for the
                 success and sustainability of your projects.
               </p>
-            </div>
-            <div className="p-5 md:p-7 xl:p-10 bg-white border border-white shadow-sm rounded-lg transition hover:border-blue-600 ">
+              <div className="mt-3 text-blue-600 flex items-center space-x-2">
+                <span>Read more</span>
+                <HiArrowLongRight
+                  size={16}
+                  className="duration-500 group-hover:translate-x-2"
+                />
+              </div>
+            </Link>
+            <Link
+              href={"/turnkey"}
+              className="group p-5 md:p-7 xl:p-10 bg-white border border-white shadow-sm rounded-lg transition hover:border-blue-600 hover:bg-blue-50 duration-500 "
+            >
               <RiKey2Line size={46} className="text-blue-600 mb-2" />
 
               <h4 className="text-lg font-bold mb-2">2. Turnkey services</h4>
-              <p className="leading-relaxed text-gray-600">
+              <p className="leading-relaxed text-gray-600 line-clamp-6">
                 Welcome to our webpage dedicated to turnkey grant management
                 services. If you or your organization are seeking financial
                 assistance for projects, programs, or research, navigating the
                 complex world of grants can be overwhelming. That's where
                 turnkey grant management services come in.
               </p>
-            </div>
-            <div className="p-5 md:p-7 xl:p-10 bg-white border border-white shadow-sm rounded-lg transition hover:border-blue-600 sm:col-span-2 lg:col-span-1">
+              <div className="mt-3 text-blue-600 flex items-center space-x-2">
+                <span>Read more</span>
+                <HiArrowLongRight
+                  size={16}
+                  className="duration-500 group-hover:translate-x-2"
+                />
+              </div>
+            </Link>
+            <Link
+              href={"/m_e"}
+              className="group p-5 md:p-7 xl:p-10 bg-white border border-white shadow-sm rounded-lg transition hover:border-blue-600 hover:bg-blue-50 duration-500 sm:col-span-2 lg:col-span-1"
+            >
               <HiOutlineDocumentText size={46} className="text-blue-600 mb-2" />
 
               <h4 className="text-lg font-bold mb-2">3. M&E</h4>
-              <p className="leading-relaxed text-gray-600">
+              <p className="leading-relaxed text-gray-600 line-clamp-6">
                 We understand the importance of assessing and measuring the
                 impact of your grant-funded projects. A robust performance
                 evaluation and monitoring plan are essential for demonstrating
                 the effectiveness of your programs, improving project outcomes,
                 and ensuring accountability to your funders and stakeholders.
               </p>
-            </div>
+              <div className="mt-3 text-blue-600 flex items-center space-x-2">
+                <span>Read more</span>
+                <HiArrowLongRight
+                  size={16}
+                  className="duration-500 group-hover:translate-x-2"
+                />
+              </div>
+            </Link>
           </div>
         </div>
         <div
