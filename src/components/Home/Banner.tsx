@@ -1,8 +1,16 @@
 export default function Banner() {
   return (
     <>
-      <div className="relative  bg-white overflow-hidden">
-        <div className=" flex flex-col lg:flex-row space-y-16 lg:space-y-0 text-center lg:text-left container xl:max-w-7xl mx-auto px-4 py-16 lg:px-8 lg:py-32">
+      <div
+        className="relative bg-fixed bg-white overflow-hidden bg-cover"
+        style={{
+          backgroundImage:
+            "url(https://images.unsplash.com/photo-1595076590135-e070743b31c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80)",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <img src="" alt="" />
+        <div className=" flex flex-col lg:flex-row space-y-16 lg:space-y-0 text-center lg:text-left container xl:max-w-7xl mx-auto px-4 py-16 lg:px-8 lg:py-36">
           <div
             className="absolute left-1/2 right-0 top-0 z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
             aria-hidden="true"
@@ -15,44 +23,35 @@ export default function Banner() {
               }}
             />
           </div>
-          <div className="lg:w-1/2 lg:flex lg:items-center">
-            <div>
-              <h1 className="text-4xl font-black text-black mb-4 ">
-                Grant
-                <span className="text-blue-600"> Managment</span>
+          <div className="lg:w-9/12 bg-black/5 backdrop-blur rounded-xl p-5 lg:flex lg:items-center">
+            <div className="">
+              <h1 className="text-3xl font-black text-white mb-4 ">
+                Welcome to the <br /> GM-DREAM TEAM agency
               </h1>
-              <h2 className="text-xl leading-relaxed font-medium text-gray-700">
-                Welcome to the "GM-Dream Team" grant agency! We are your
-                dedicated partner in bridging the gap between grantor and
-                grantee organizations.
+              <h2 className="text-xl leading-relaxed font-medium text-white">
+                Unlock Your Grant Management Talent with GM-Dream Team and Make
+                Your Dreams a Reality
               </h2>
-              <div className="flex flex-col sm:flex-row sm:items-center justify-center lg:justify-start space-y-2 sm:space-y-0 sm:space-x-2 pt-10 pb-16">
+
+              <div className="flex flex-col sm:flex-row sm:items-center justify-center lg:justify-start space-y-2 sm:space-y-0 sm:space-x-2 pt-10">
                 <a
                   href="#"
-                  className="inline-flex justify-center items-center space-x-2 border font-semibold rounded-lg px-7 py-3 leading-6 border-blue-700 bg-blue-700 text-white hover:text-white hover:bg-blue-600 hover:border-blue-600 focus:ring focus:ring-blue-400 focus:ring-opacity-50 active:bg-blue-700 active:border-blue-700 "
+                  className="inline-flex justify-center items-center space-x-2 font-semibold rounded-lg px-7 py-3 leading-6  bg-pink-650 text-white hover:text-white hover:bg-blue-600 hover:border-blue-600 focus:ring focus:ring-blue-400 focus:ring-opacity-50 active:bg-blue-700 active:border-blue-700 "
                 >
                   <span>Contact us</span>
-                </a>
-                <a
-                  href="#"
-                  className="inline-flex justify-center items-center space-x-2 border font-semibold rounded-lg px-7 py-3 leading-6 border-gray-200 bg-white text-gray-800 hover:border-gray-300 hover:text-gray-900 hover:shadow-sm focus:ring focus:ring-gray-300 focus:ring-opacity-25 active:border-gray-200 active:shadow-none "
-                >
-                  <span>Learn more</span>
                 </a>
               </div>
             </div>
           </div>
           <div className="lg:w-1/2 lg:ml-16 lg:flex lg:justify-center lg:items-center">
             <div className="relative mx-5 lg:w-96">
-              <div className="absolute top-0 left-0 w-40 h-40 lg:w-72 lg:h-72 bg-tranparent border border-blue-200 rounded-full -mt-16 -ml-20" />
-              <div className="absolute top-0 left-0 w-40 h-40 lg:w-72 lg:h-72 bg-tranparent border border-blue-100 rounded-full -mt-20 -ml-14" />
-              <div className="absolute bottom-0 right-0 w-40 h-40 lg:w-72 lg:h-72 bg-tranparent border border-blue-200 rounded-full -mb-16 -mr-20" />
-              <div className="absolute bottom-0 right-0 w-40 h-40 lg:w-72 lg:h-72 bg-tranparent border border-blue-100 rounded-full -mb-20 -mr-14" />
-              <div className="absolute inset-0 rounded-xl -m-6 -rotate-2 border border-blue-850/50" />
-              <div className="absolute inset-0 rounded-xl -m-6 rotate-1 border border-pink-650/50 bg-opacity-75 shadow-inner" />
+              <div className="absolute top-0 left-0 w-40 h-40 lg:w-72 lg:h-72 bg-tranparent border border-blue-200 border-opacity-30 rounded-full -mt-16 -ml-20" />
+              <div className="absolute top-0 left-0 w-40 h-40 lg:w-72 lg:h-72 bg-tranparent border border-blue-100 border-opacity-30 rounded-full -mt-20 -ml-14" />
+              <div className="absolute bottom-0 right-0 w-40 h-40 lg:w-72 lg:h-72 bg-tranparent border border-blue-200 border-opacity-30 rounded-full -mb-16 -mr-20" />
+              <div className="absolute bottom-0 right-0 w-40 h-40 lg:w-72 lg:h-72 bg-tranparent border border-blue-100 border-opacity-30 rounded-full -mb-20 -mr-14" />
               <img
-                src="https://cdn.tailkit.com/media/placeholders/photo-RSCirJ70NDM-800x1000.jpg"
-                className="relative rounded-lg mx-auto shadow-lg"
+                src="/logo.svg"
+                className="rounded-lg mx-auto shadow-lg bg-white w-60 relative"
                 alt="Hero Image"
               />
             </div>
@@ -62,3 +61,61 @@ export default function Banner() {
     </>
   );
 }
+
+// export default function Example() {
+//   return (
+//     <div className="bg-gray-900">
+//       <div className="relative isolate overflow-hidden pt-14">
+//         <img
+//           src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2830&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
+//           alt=""
+//           className="absolute inset-0 -z-10 h-full w-full object-cover"
+//         />
+//         <div
+//           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+//           aria-hidden="true"
+//         >
+//           <div
+//             className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+//             style={{
+//               clipPath:
+//                 "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+//             }}
+//           />
+//         </div>
+//         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+//           <div className="text-center">
+//             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+//               Data to enrich your online business
+//             </h1>
+//             <p className="mt-6 text-lg leading-8 text-gray-300">
+//               Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
+//               lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
+//               fugiat aliqua.
+//             </p>
+//             <div className="mt-10 flex items-center justify-center gap-x-6">
+//               <a
+//                 href="#"
+//                 className="rounded-md bg-pink-650 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+//               >
+//                 Contact us
+//               </a>
+//             </div>
+//           </div>
+//         </div>
+//         <div
+//           className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+//           aria-hidden="true"
+//         >
+//           <div
+//             className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+//             style={{
+//               clipPath:
+//                 "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+//             }}
+//           />
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }

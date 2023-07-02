@@ -1,129 +1,120 @@
 import Layout from "@/components/Layout/Layout";
-import Link from "next/link";
 
 export default function ConsultationPage() {
   return (
-    <Layout title="Consultation" className="bg-white py-24 sm:py-32">
+    <Layout title="M & E" className="py-24 sm:py-32 relative isolate">
+      <img
+        src="https://images.unsplash.com/photo-1623423415485-1d36867376b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+        alt=""
+        className="absolute inset-0 -z-10 h-full w-full object-cover"
+      />
+      <div className="absolute inset-0 -z-10 h-full w-full object-cover bg-blue-850 bg-opacity-70"></div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-          <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Grant Management Consultation
+          <h1 className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl text-center">
+            M&E
           </h1>
-          <div className="mt-10 grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-gray-700 lg:max-w-none lg:grid-cols-2">
+          <div className="mt-10 grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-white lg:max-w-none lg:grid-cols-2">
             <div>
-              <p>Welcome to our Grant Management Consultation Services!</p>
               <p className="mt-8">
-                At the GM-Dream Team we understand that managing grants can be a
-                complex and challenging task. Whether you are a nonprofit
-                organization, a research institution, or a private entity,
-                securing and effectively managing grants is crucial for the
-                success and sustainability of your projects.
+                We understand the importance of assessing and measuring the
+                impact of your grant-funded projects. A robust performance
+                evaluation and monitoring plan are essential for demonstrating
+                the effectiveness of your programs, improving project outcomes,
+                and ensuring accountability to your funders and stakeholders. We
+                focus on the creation of a Grant Performance Evaluation and
+                Monitoring Plan at the pre-award phase of a grant lifecycle.
               </p>
               <p>
-                Our team of experienced professionals is here to support you
-                every step of the way. We offer comprehensive grant management
-                consultations tailored to meet your specific needs. With our
-                expertise and in-depth understanding of the grant landscape, we
-                can help you navigate the intricacies of grant funding and
-                optimize your chances of securing and successfully managing
-                grants.
+                Our consultations on developing a Grant Performance Evaluation
+                and Monitoring Plan provide you with the expertise and guidance
+                necessary to develop and implement a comprehensive evaluation
+                framework that aligns with your project goals and objectives.
+                Here's how we can assist you:
               </p>
               <p className="mt-8">
-                Here's how our consultation services can benefit you:
-                <br />
-                Grant Readiness Assessment: We begin by evaluating your
-                organization's readiness to apply for grants. Our team will
-                conduct a thorough analysis of your programs, financial systems,
-                and overall capacity to effectively manage grants. We will
-                identify any gaps or areas that need improvement and provide you
-                with actionable recommendations to enhance your grant readiness.
+                Evaluation Framework Development: Our experienced consultants
+                will coach you on developing a customized evaluation framework
+                tailored to your specific project. We will help you define clear
+                and measurable goals and objectives, identify relevant
+                performance indicators, and design data collection methods that
+                capture the information needed to evaluate project outcomes.
               </p>
 
               <p className="mt-8">
-                Grant Research and Identification: Finding the right grants that
-                align with your organization's mission and goals can be
-                time-consuming and overwhelming. Our experts will assist you in
-                identifying relevant funding opportunities from various sources,
-                including government agencies, foundations, and private
-                organizations. We will ensure that you have a comprehensive list
-                of potential grants to pursue.
+                Monitoring and Data Collection Strategies: Effective monitoring
+                is crucial for tracking project progress and identifying
+                potential challenges or deviations from the intended course. We
+                will assist you in developing monitoring strategies that align
+                with your evaluation framework, ensuring that you have the
+                necessary systems in place to collect accurate and timely data.
+                This may include establishing data collection protocols,
+                designing surveys or questionnaires, conducting interviews or
+                focus groups, or utilizing existing data sources.
               </p>
               <p className="mt-8">
-                Grant Proposal Development: Writing a compelling grant proposal
-                requires a deep understanding of the funder's requirements and
-                the ability to clearly articulate your project's goals,
-                objectives, and impact. Our team will work closely with you to
-                develop persuasive grant proposals that highlight the
-                significance of your work and effectively communicate your
-                organization's strengths and capabilities.
+                Data Analysis and Interpretation: Once the data has been
+                collected, our consultants will teach you how to use rigorous
+                analytical methods to extract meaningful insights and draw
+                conclusions. We will help you to choose appropriate statistical
+                techniques and qualitative analysis methods to interpret the
+                data and identify patterns, trends, and areas for improvement.
+                Our team will teach you how to compose comprehensive reports
+                that highlight key findings and actionable recommendations based
+                on the data analysis.
               </p>
             </div>
             <div>
               <p className="mt-8">
-                Budgeting and Financial Management: Managing grant finances is a
-                critical aspect of grant administration. We will coach you on
-                developing accurate and realistic budgets, ensuring that all
-                expenses align with the grant guidelines and restrictions. Our
-                financial management guidance will enable you to track expenses,
-                manage cash flow, and comply with financial reporting
-                requirements.
+                Impact Assessment and Reporting: Demonstrating the impact of
+                your grant-funded projects is crucial for securing future
+                funding and maintaining stakeholder trust. We will help you
+                assess the effectiveness and outcomes of your programs by
+                evaluating the extent to which project goals and objectives have
+                been achieved. Our experts will assist you in documenting and
+                reporting the impact of your initiatives through concise and
+                compelling reports that communicate the value of your work to
+                funders, stakeholders, and the wider community.
               </p>
 
               <p className="mt-8">
-                Grant Compliance and Reporting: Grants often come with specific
-                compliance regulations and reporting obligations. Our experts
-                will guide you through the compliance process, ensuring that you
-                meet all the necessary requirements. We will assist you in
-                developing systems and procedures to track and report project
-                progress, outcomes, and financial information, enabling you to
-                maintain transparency and accountability.
+                Continuous Improvement Strategies: Evaluating your project's
+                performance goes beyond assessing outcomes. It also involves
+                identifying areas for improvement and implementing strategies to
+                enhance future program effectiveness. Our consultants will coach
+                you on developing action plans based on evaluation findings,
+                helping you refine your project strategies, strengthen program
+                implementation, and maximize the impact of your grant-funded
+                initiatives.
               </p>
 
               <p className="mt-8">
-                Grant Performance Evaluation: Assessing the impact of your
-                funded projects is vital for ongoing success and future funding
-                opportunities. Our team will help you design and implement
-                robust evaluation frameworks to measure the effectiveness and
-                impact of your programs. We will provide valuable insights and
-                recommendations to enhance your project's outcomes and
-                strengthen your grant management strategies.
+                Capacity Building and Training: We believe in empowering
+                organizations to conduct their own evaluation and monitoring
+                activities. Through our consultation services, we offer capacity
+                building and training sessions to equip your team with the
+                necessary skills and knowledge to design and implement effective
+                evaluation frameworks independently. We will share best
+                practices, provide guidance on data collection and analysis
+                techniques, and support you in building a culture of continuous
+                learning and improvement.
               </p>
 
               <p className="mt-8">
-                Partnering with us means gaining access to a wealth of knowledge
-                and expertise in grant management. We are committed to your
-                success and will work closely with you to ensure that your
-                organization maximizes its grant funding potential and achieves
-                its mission-driven objectives.
+                By engaging our M&E consultation services, you will gain a
+                comprehensive understanding of your project's impact and
+                effectiveness. We will equip you with the tools and insights
+                necessary to make informed decisions, enhance project outcomes,
+                and effectively communicate your achievements to stakeholders.
               </p>
 
               <p className="mt-8">
-                Contact us today to schedule a consultation and take the first
-                step toward effective grant management. Let us be your trusted
-                partner in securing, managing, and maximizing grants for your
-                organization's success.
+                Contact us today to schedule a consultation and embark on a
+                journey toward evidence-based evaluation and impactful grant
+                management. Let us help you unlock the full potential of your
+                grant-funded projects.
               </p>
             </div>
-          </div>
-          <div className="mt-10 flex">
-            <Link
-              href="/contact"
-              className="rounded-md bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              Contact us
-            </Link>
-          </div>
-        </div>
-      </div>
-      <div className="relative overflow-hidden pt-16 lg:pt-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <img
-            className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10"
-            src="https://images.unsplash.com/photo-1562564055-71e051d33c19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-            alt=""
-          />
-          <div className="relative" aria-hidden="true">
-            <div className="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]" />
           </div>
         </div>
       </div>

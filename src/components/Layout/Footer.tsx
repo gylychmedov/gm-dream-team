@@ -29,15 +29,17 @@ const Footer = () => {
               <p className="font-lato-bold text-base">Pages</p>
 
               <nav className="mt-6 flex flex-col space-y-4 text-sm">
-                {navLinks.map((links) => (
-                  <Link
-                    key={links.route}
-                    href={links.route}
-                    className="text-gray-200 hover:opacity-75 hover:border-l hover:pl-4 duration-500"
-                  >
-                    {links.name}
-                  </Link>
-                ))}
+                {navLinks
+                  .filter((link) => link.sub == null)
+                  .map((links) => (
+                    <Link
+                      key={links.route}
+                      href={links.route}
+                      className="text-gray-200 hover:opacity-75 hover:pl-2 duration-500"
+                    >
+                      {links.name}
+                    </Link>
+                  ))}
               </nav>
             </div>
 
@@ -47,8 +49,8 @@ const Footer = () => {
                 {navLinks[2].sub?.map((links) => (
                   <Link
                     key={links.route}
-                    href={`/services/${links.route}`}
-                    className="text-gray-100 transition hover:opacity-75"
+                    href={`/${links.route}`}
+                    className="text-gray-200 hover:opacity-75 hover:pl-2 duration-500"
                   >
                     {links.name}
                   </Link>

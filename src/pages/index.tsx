@@ -17,7 +17,7 @@ export default function Home() {
       <Layout title="Home">
         <Banner />
         <Courses />
-        <Teams />
+        {/* <Teams /> */}
         <Services />
         <Subscribe />
       </Layout>

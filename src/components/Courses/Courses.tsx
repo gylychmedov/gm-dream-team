@@ -8,8 +8,7 @@ const products = [
     category: "Grant Managment",
     href: "#",
     price: "$49",
-    imageSrc:
-      "https://cdn.tailkit.com/media/placeholders/photo-RSCirJ70NDM-800x1000.jpg",
+    imageSrc: "/course.jpg",
     lessons: "13 lessons",
   },
   {
@@ -18,8 +17,7 @@ const products = [
     category: "Data",
     href: "#",
     price: "$49",
-    imageSrc:
-      "https://cdn.tailkit.com/media/placeholders/photo-RSCirJ70NDM-800x1000.jpg",
+    imageSrc: "/course.jpg",
     lessons: "24 lessons",
   },
   {
@@ -28,8 +26,7 @@ const products = [
     category: "Grant Managment",
     href: "#",
     price: "$49",
-    imageSrc:
-      "https://cdn.tailkit.com/media/placeholders/photo-RSCirJ70NDM-800x1000.jpg",
+    imageSrc: "/course.jpg",
     lessons: "5 lessons",
   },
   {
@@ -38,8 +35,7 @@ const products = [
     category: "Analytics",
     href: "#",
     price: "$49",
-    imageSrc:
-      "https://cdn.tailkit.com/media/placeholders/photo-RSCirJ70NDM-800x1000.jpg",
+    imageSrc: "/course.jpg",
     lessons: "8 lessons",
   },
   {
@@ -48,8 +44,7 @@ const products = [
     category: "Grant Managment",
     href: "#",
     price: "$49",
-    imageSrc:
-      "https://cdn.tailkit.com/media/placeholders/photo-RSCirJ70NDM-800x1000.jpg",
+    imageSrc: "/course.jpg",
     lessons: "13 lessons",
   },
   {
@@ -58,8 +53,7 @@ const products = [
     category: "Data",
     href: "#",
     price: "$49",
-    imageSrc:
-      "https://cdn.tailkit.com/media/placeholders/photo-RSCirJ70NDM-800x1000.jpg",
+    imageSrc: "/course.jpg",
     lessons: "24 lessons",
   },
   {
@@ -68,8 +62,7 @@ const products = [
     category: "Grant Managment",
     href: "#",
     price: "$49",
-    imageSrc:
-      "https://cdn.tailkit.com/media/placeholders/photo-RSCirJ70NDM-800x1000.jpg",
+    imageSrc: "/course.jpg",
     lessons: "5 lessons",
   },
   {
@@ -78,15 +71,14 @@ const products = [
     category: "Analytics",
     href: "#",
     price: "$49",
-    imageSrc:
-      "https://cdn.tailkit.com/media/placeholders/photo-RSCirJ70NDM-800x1000.jpg",
+    imageSrc: "/course.jpg",
     lessons: "8 lessons",
   },
 ];
 
 export default function Courses() {
   return (
-    <div className="bg-pink/5 py-20">
+    <div className="bg-white py-20">
       <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <div className="flex items-center justify-between space-x-4">
           <div className="flex flex-col">
@@ -126,8 +118,8 @@ export default function Courses() {
             }}
           >
             {products.map((product) => (
-              <SwiperSlide key={product.id}>
-                <div className="group relative bg-white p-3 rounded-xl shadow-xl shadow-gray-100">
+              <SwiperSlide key={product.id} className="pb-10">
+                <div className="group relative bg-blue-850/5 p-3 rounded-xl">
                   <div className="absolute left-4 top-4 text-sm bg-white/70 backdrop-blur text-gray-800 rounded-md w-max px-2 py-1">
                     {product.lessons}
                   </div>
@@ -135,7 +127,7 @@ export default function Courses() {
                     <img
                       src={product.imageSrc}
                       alt={product.imageSrc}
-                      className="object-cover aspect-square object-center"
+                      className="object-cover aspect-square object-center border border-gray-100 rounded-xl"
                     />
                   </div>
 
@@ -143,9 +135,6 @@ export default function Courses() {
                     <div className="text-sm text-pink-650 rounded-md w-max px-2 py-1">
                       - {product.category}
                     </div>
-                    {/* <p className="font-lato-bold text-lg px-2 py-1 rounded-full text-pink-650">
-                  {product.price}
-                </p> */}
                   </div>
                   <h3 className="font-lato-bold px-2 text-lg">
                     {product.name}

@@ -43,7 +43,7 @@ export default function Subscribe() {
                 />
               </div>
               <dt className="mt-4 font-semibold text-gray-700">
-                Weekly articles
+                Monthly articles
               </dt>
               <dd className="mt-2 leading-7 text-gray-400">
                 We will send weekly updates to your email address
