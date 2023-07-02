@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
+import Link from "next/link";
 
 const products = [
   {
@@ -89,13 +90,13 @@ export default function Courses() {
               Get the best course with the best price with world-class tutors
             </span>
           </div>
-          <a
-            href="#"
+          <Link
+            href="/courses"
             className="whitespace-nowrap text-sm font-medium text-indigo-600 hover:text-indigo-500"
           >
             View all
             <span aria-hidden="true"> &rarr;</span>
-          </a>
+          </Link>
         </div>
         <div className="mt-10">
           <Swiper
@@ -119,7 +120,7 @@ export default function Courses() {
           >
             {products.map((product) => (
               <SwiperSlide key={product.id} className="pb-10">
-                <div className="group relative bg-blue-850/5 p-3 rounded-xl">
+                <div className="group relative bg-white hover:bg-blue-50 duration-500 border  border-gray-50 p-3 rounded-xl shadow-xl shadow-gray-100">
                   <div className="absolute left-4 top-4 text-sm bg-white/70 backdrop-blur text-gray-800 rounded-md w-max px-2 py-1">
                     {product.lessons}
                   </div>
@@ -127,7 +128,7 @@ export default function Courses() {
                     <img
                       src={product.imageSrc}
                       alt={product.imageSrc}
-                      className="object-cover aspect-square object-center border border-gray-100 rounded-xl"
+                      className="object-cover aspect-square border rounded-xl object-center"
                     />
                   </div>
 
