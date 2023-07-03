@@ -4,7 +4,7 @@
 
 @layer base {
     body {
-        @apply text-sm font-lato-regular outline-none
+        @apply text-sm font-lato-regular outline-none select-none
     }
 
     .contain {

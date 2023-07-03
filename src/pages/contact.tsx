@@ -56,9 +56,29 @@ const ContactPage = () => {
             <h2 className="mb-2 font-lato-bold text-gray-900 text-lg">
               Social accounts
             </h2>
-            <div className="text-gray-600">Instagram</div>
-            <div className="text-gray-600">Twitter</div>
-            <div className="text-gray-600">Facebook</div>
+            <a
+              href="https://www.instagram.com/p/CuMwFvfNn1w/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+              target="_blank"
+              className="text-gray-600"
+            >
+              Instagram
+            </a>
+
+            <a
+              href="https://facebook.com/groups/1835378983543572/"
+              target="_blank"
+              className="text-gray-600"
+            >
+              Facebook
+            </a>
+
+            <a
+              href="https://wa.me/qr/W3G72LWM3UBNP1"
+              target="_blank"
+              className="text-gray-600"
+            >
+              Whatsapp
+            </a>
           </aside>
         </section>
         <section className="col-span-12 md:col-span-6 flex flex-col space-y-4">

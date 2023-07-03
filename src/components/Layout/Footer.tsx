@@ -1,7 +1,8 @@
 import { navLinks } from "@/assets/data/navLinks";
 import Link from "next/link";
 import { AiFillInstagram } from "react-icons/ai";
-import { BsFacebook, BsTwitter } from "react-icons/bs";
+import { BsFacebook } from "react-icons/bs";
+import { FaWhatsappSquare } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -63,29 +64,29 @@ const Footer = () => {
 
               <nav className="mt-8 flex gap-6 ">
                 <a
-                  href="/"
+                  href="https://www.instagram.com/p/CuMwFvfNn1w/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
                   rel="noreferrer"
                   target="_blank"
                   className="hover:opacity-75"
                 >
                   <AiFillInstagram size={24} />
                 </a>
-                <a
-                  href="/"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="hover:opacity-75"
-                >
-                  <BsTwitter size={24} />
-                </a>
 
                 <a
-                  href="/"
+                  href="https://facebook.com/groups/1835378983543572/"
                   rel="noreferrer"
                   target="_blank"
                   className="hover:opacity-75"
                 >
                   <BsFacebook size={24} />
+                </a>
+                <a
+                  href="https://wa.me/qr/W3G72LWM3UBNP1"
+                  rel="noreferrer"
+                  target="_blank"
+                  className="hover:opacity-75"
+                >
+                  <FaWhatsappSquare size={24} />
                 </a>
               </nav>
             </div>

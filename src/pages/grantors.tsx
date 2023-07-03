@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout/Layout";
+import Link from "next/link";
 
 const ForGrantorsPage = () => {
   return (
@@ -116,12 +117,12 @@ const ForGrantorsPage = () => {
             </p>
 
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="#"
+              <Link
+                href="/contact"
                 className="rounded-md bg-pink-650 w-80 text-center py-4 text-sm font-semibold text-white shadow-sm hover:-translate-y-1 duration-500"
               >
                 Contact us
-              </a>
+              </Link>
             </div>
           </div>
         </div>

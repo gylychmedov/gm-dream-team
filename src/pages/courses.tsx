@@ -1,5 +1,3 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper";
 import Layout from "@/components/Layout/Layout";
 
 const products = [

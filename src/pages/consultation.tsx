@@ -111,28 +111,8 @@ export default function ConsultationPage() {
               </p>
             </div>
           </div>
-          {/* <div className="mt-10 flex">
-            <Link
-              href="/contact"
-              className="rounded-md bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              Contact us
-            </Link>
-          </div> */}
         </div>
       </div>
-      {/* <div className="relative overflow-hidden pt-16 lg:pt-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <img
-            className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10"
-            src="https://images.unsplash.com/photo-1562564055-71e051d33c19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-            alt=""
-          />
-          <div className="relative" aria-hidden="true">
-            <div className="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-blue-850 pt-[7%]" />
-          </div>
-        </div>
-      </div> */}
     </Layout>
   );
 }

@@ -3,7 +3,6 @@ import Banner from "@/components/Home/Banner";
 import Subscribe from "@/components/Home/Subscribe";
 import Layout from "@/components/Layout/Layout";
 import Services from "@/components/Services/Services";
-import Teams from "@/components/Team/Teams";
 import Head from "next/head";
 
 export default function Home() {

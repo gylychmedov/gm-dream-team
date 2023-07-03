@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout/Layout";
-import { GiHeartKey } from "react-icons/gi";
+import Link from "next/link";
 
 const TurnkeyPage = () => {
   return (
@@ -7,7 +7,6 @@ const TurnkeyPage = () => {
       <div className="relative isolate overflow-hidden pt-14">
         <img
           src="https://images.unsplash.com/photo-1627406951080-9ad86f960da6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-          // src="https://images.unsplash.com/photo-1462899006636-339e08d1844e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
           alt=""
           className="absolute inset-0 -z-10 h-full w-full object-cover"
         />
@@ -103,7 +102,7 @@ const TurnkeyPage = () => {
               any inquiries, we would love to hear from you. Please reach out to
               our team using the contact information below:
               <br />
-              Email: gm-dream@team
+              Email: admin@gm-dream.team
               <br />
             </p>
 
@@ -113,17 +112,16 @@ const TurnkeyPage = () => {
             </p>
 
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="#"
+              <Link
+                href="/contact"
                 className="rounded-md bg-pink-650 w-80 text-center py-4 text-sm font-semibold text-white shadow-sm hover:-translate-y-1 duration-500"
               >
                 Contact us
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </div>
-      {/* <Services /> */}
     </Layout>
   );
 };
