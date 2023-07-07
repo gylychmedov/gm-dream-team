@@ -83,7 +83,7 @@ const Header = () => {
                     route.pathname == links.route
                       ? "border-pink-650 text-pink-650"
                       : "border-transparent"
-                  } flex-x justify-between py-4 px-5 font-medium  border-l-2 hover:border-pink-650 hover:text-pink-650 duration-300`}
+                  } flex-x justify-between py-4 px-5 font-medium  border-b-2 hover:border-pink-650 hover:text-pink-650 duration-300`}
                 >
                   <span className="whitespace-nowrap text-base">
                     {links.name}
@@ -129,6 +129,7 @@ const Header = () => {
                   <>
                     {links.sub!.map((sub) => (
                       <Link
+                        key={sub.route}
                         href={sub.route}
                         onClick={() => {
                           active == links.route

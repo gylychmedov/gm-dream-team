@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout/Layout";
+import Link from "next/link";
 
 export default function ConsultationPage() {
   return (
@@ -115,6 +116,14 @@ export default function ConsultationPage() {
                 grant-funded projects.
               </p>
             </div>
+          </div>
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <Link
+              href="/contact"
+              className="rounded-md bg-pink-650 w-80 text-center py-4 text-sm font-semibold text-white shadow-sm hover:-translate-y-1 duration-500"
+            >
+              Contact us
+            </Link>
           </div>
         </div>
       </div>

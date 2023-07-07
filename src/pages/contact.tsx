@@ -31,8 +31,9 @@ const ContactPage = () => {
             <h2 className="mb-2 font-lato-bold text-gray-900 text-lg">
               Call Us On
             </h2>
-            <div className="text-gray-600">+993 (61) 12 34 56</div>
-            <div className="text-gray-600">+993 (61) 12 34 56</div>
+            <a href="tel:+995599488466" className="text-gray-600">
+              +995 599 48 84 66
+            </a>
           </aside>
           <aside className="bg-white flex-center px-4 py-6 lg:p-10 flex-col rounded-lg shadow-xl shadow-gray-100 group-hover:blur hover:!blur-0 group-hover:scale-90 hover:!scale-110 duration-500 cursor-default">
             <div className="bg-yellow-500/10 w-14 h-14 flex-center rounded-full text-yellow-500 mb-5">

@@ -50,7 +50,7 @@
 }
 
 .loader path {
-    stroke: #000;
+    stroke: yellow;
     stroke-width: 0.6px;
     animation: dashArray 3s ease-in-out infinite,
         dashOffset 3s linear infinite;
@@ -58,17 +58,17 @@
 
 @keyframes dashArray {
     0% {
-        fill: rgba(255, 255, 255, .05);
+        fill: rgba(255, 255, 255, .5);
         stroke-dasharray: 0 1 359 0;
     }
 
     50% {
-        fill: transparent;
+        fill: rgba(255, 255, 255, .5);
         stroke-dasharray: 0 359 1 0;
     }
 
     100% {
-        fill: rgba(255, 255, 255, .05);
+        fill: rgba(255, 255, 255, .5);
         stroke-dasharray: 359 1 0 0;
     }
 }
