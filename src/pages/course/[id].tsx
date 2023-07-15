@@ -66,7 +66,7 @@ export default function Example() {
       title="Course"
       className="contain px-2 py-5 grid grid-cols-12 gap-x-3 gap-y-3"
     >
-      <Breadcrumb title="Introduction to Civil Society Organizational Management" />
+      <Breadcrumb title="Day 3" />
       <section className="col-span-12 lg:col-span-8 bg-white border border-gray-100 rounded-xl">
         <video
           src="https://v4.cdnpk.net/videvo_files/video/free/video0464/large_watermarked/_import_611b5585777d85.29325813_FPpreview.mp4"
