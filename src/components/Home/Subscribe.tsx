@@ -46,7 +46,7 @@ export default function Subscribe() {
                 Monthly articles
               </dt>
               <dd className="mt-2 leading-7 text-gray-400">
-                We will send weekly updates to your email address
+                We will send monthly updates to your email address
               </dd>
             </div>
             <div className="flex flex-col items-start">

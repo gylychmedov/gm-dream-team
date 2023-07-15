@@ -11,7 +11,7 @@ const ContactPage = () => {
         <header className="col-span-12 flex-center py-10  flex-center flex-col">
           <span className="text-teal-850 font-bold">NEED HELP?</span>
           <span className="text-gray-900 font-bold text-3xl mt-3">
-            Get in Touch with us?
+            Get in touch with us
           </span>
         </header>
         <section className="col-span-12 md:col-span-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-3 lg:gap-5 group">

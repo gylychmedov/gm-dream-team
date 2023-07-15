@@ -9,11 +9,15 @@ interface ILayoutProps {
   className?: string;
 }
 
-const Layout = ({ children, className, title }: ILayoutProps) => {
+const Layout = ({ children, className, title = "" }: ILayoutProps) => {
   return (
     <main className="bg-gray-50 min-h-screen">
       <Head>
-        <title>{title} - GM dream</title>
+        <title>GM-Dream tream</title>
+        <meta
+          name="description"
+          content="Build Bridges, Make a Difference as a Grant Expert!"
+        />
       </Head>
       <Header />
       <section className={`${className}`}>{children}</section>

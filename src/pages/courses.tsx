@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout/Layout";
+import Link from "next/link";
 
 const products = [
   {
@@ -77,8 +78,8 @@ const products = [
 
 export default function CoursesPage() {
   return (
-    <Layout title="Courses" className="bg-blue-100/5 py-20">
-      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+    <Layout title="Courses" className="bg-blue-100/5 py-10">
+      <div className=" contain px-4 sm:px-6  lg:px-8">
         <div className="flex items-center justify-between space-x-4">
           <div className="flex flex-col">
             <h2 className="text-3xl text-gray-900 font-lato-bold">
@@ -91,8 +92,9 @@ export default function CoursesPage() {
         </div>
         <div className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {products.map((product) => (
-            <div
+            <Link
               key={product.name}
+              href="/course/1"
               className="group relative bg-white hover:bg-blue-50 duration-500 border  border-gray-50 p-3 rounded-xl shadow-xl shadow-gray-100"
             >
               <div className="absolute left-4 top-4 text-sm bg-white/70 backdrop-blur text-gray-800 rounded-md w-max px-2 py-1">
@@ -107,12 +109,12 @@ export default function CoursesPage() {
               </div>
 
               <div className="mt-3 flex items-center justify-between">
-                <div className="text-sm text-pink-650 rounded-md w-max px-2 py-1">
+                <div className="text-sm text-gray-400 rounded-md w-max px-2 py-1">
                   - {product.category}
                 </div>
               </div>
               <h3 className="font-lato-bold px-2 text-lg">{product.name}</h3>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
