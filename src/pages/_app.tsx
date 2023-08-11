@@ -1,13 +1,15 @@
 import "@/styles/tailwind.css";
 import "swiper/css";
 import type { AppProps } from "next/app";
-import { Toaster } from "react-hot-toast";
+import Watcher from "@/components/Elements/Watcher";
 
-export default function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
-      <Toaster />
+      <Watcher />
       <Component {...pageProps} />
     </>
   );
-}
+};
+
+export default App;
