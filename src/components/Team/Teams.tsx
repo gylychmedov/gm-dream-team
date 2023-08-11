@@ -126,16 +126,26 @@ export default function Teams() {
 }
 
 const Team = () => {
+  const Team = {
+    image:
+      "https://img.freepik.com/free-photo/cute-smiling-young-man-with-bristle-looking-satisfied_176420-18989.jpg?w=740&t=st=1686874125~exp=1686874725~hmac=c760c4a284c72183088f0b43176bbc95166d2588c99fc947bd11369d857f1152",
+    name: "James Carlson",
+    position: "Manager",
+    instagram: "#",
+    twitter: "#",
+    facebook: "#",
+  };
+
   return (
     <aside className="col-span-12 sm:col-span-6 lg:col-span-4 relative group-hover:scale-90 group-hover:grayscale hover:!grayscale-0 group-hover:shadow-md hover:!shadow-2xl duration-500 hover:!scale-105  bg-gray-50 border border-gray-100 shadow-xl shadow-gray-100 rounded-2xl overflow-hidden">
       <img
-        src="https://img.freepik.com/free-photo/cute-smiling-young-man-with-bristle-looking-satisfied_176420-18989.jpg?w=740&t=st=1686874125~exp=1686874725~hmac=c760c4a284c72183088f0b43176bbc95166d2588c99fc947bd11369d857f1152"
+        src={Team.image}
         className="h-72 w-full object-cover hover:scale-110 duration-500"
         alt=""
       />
       <div className="flex flex-col p-5 relative">
-        <div className="font-lato-bold text-lg">James Carlson</div>
-        <div className="text-gray-600 text-base">Manager</div>
+        <div className="font-lato-bold text-lg">{Team.name}</div>
+        <div className="text-gray-600 text-base">{Team.position}</div>
         <nav className="mt-5 flex gap-6 text-teal-850">
           <a
             href="/"
