@@ -1,13 +1,9 @@
+import { IUserStore } from "@/interfaces/store/IUserStore";
+import { IUser } from "@/interfaces/user/IUser";
 import { create } from "zustand";
 
-export interface IUserStore {
-  user: {};
-  isAuth: boolean;
-  setUser: (user: {}) => void;
-}
-
 const useUserStore = create<IUserStore>((set) => ({
-  user: {},
+  user: {} as IUser,
   isAuth: false,
   setUser: (user) =>
     set({

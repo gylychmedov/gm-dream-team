@@ -50,7 +50,7 @@ const Footer = () => {
                 {navLinks[2].sub?.map((links) => (
                   <Link
                     key={links.route}
-                    href={`/${links.route}`}
+                    href={`${links.route}`}
                     className="text-gray-200 hover:opacity-75 hover:pl-2 duration-500"
                   >
                     {links.name}

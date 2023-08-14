@@ -6,10 +6,12 @@ import { BiChevronDown } from "react-icons/bi";
 import { RiMenu5Fill } from "react-icons/ri";
 import LoaderFullscreen from "../Elements/Loader.fullscreen";
 import { IoMdClose } from "react-icons/io";
-import { AnimatePresence, motion } from "framer-motion";
+import MobileMenu from "./MobileMenu";
+import useUserStore from "@/store/useUser";
 
 const Header = () => {
   const route = useRouter();
+  const { isAuth, user } = useUserStore();
   const [mobileMenu, setMobileMenu] = useState(false);
   const [active, setActive] = useState("");
   const loaderRef = useRef<HTMLDivElement>(null);
@@ -73,7 +75,13 @@ const Header = () => {
                 </div>
               ) : (
                 <Link
-                  href={links.route}
+                  href={
+                    links.route == "/user/signin"
+                      ? isAuth
+                        ? "#"
+                        : links.route
+                      : links.route
+                  }
                   onClick={() => {
                     active == links.route
                       ? setActive("")
@@ -86,7 +94,11 @@ const Header = () => {
                   } flex-x justify-between py-4 px-5 font-medium  border-b-2 hover:border-pink-650 hover:text-pink-650 duration-300`}
                 >
                   <span className="whitespace-nowrap text-base">
-                    {links.name}
+                    {links.route == "/user/signin"
+                      ? isAuth
+                        ? user.username.slice(0, 5)
+                        : links.name
+                      : links.name}
                   </span>
                   {links.sub && (
                     <BiChevronDown
@@ -115,70 +127,12 @@ const Header = () => {
           ))}
         </nav>
       </header>
-      <AnimatePresence>
-        {mobileMenu && (
-          <motion.aside
-            initial={{ height: 0, top: 10, opacity: 0 }}
-            exit={{ height: 0, top: 10, opacity: 0 }}
-            animate={{ height: "auto", top: 52, opacity: 1 }}
-            className="fixed right-5  bg-white border p-3 rounded-xl rounded-tr-none z-20  w-64 overflow-hidden md:hidden"
-          >
-            {navLinks.map((links) => (
-              <div className="relative" key={links.route}>
-                {links.route == "#" ? (
-                  <>
-                    {links.sub!.map((sub) => (
-                      <Link
-                        key={sub.route}
-                        href={sub.route}
-                        onClick={() => {
-                          active == links.route
-                            ? setActive("")
-                            : setActive(links.route);
-                        }}
-                        className={`${
-                          route.pathname == links.route
-                            ? "border-pink-650 text-pink-650"
-                            : "border-transparent"
-                        } flex-x justify-between py-4 p-5 font-medium  border-l-2 hover:border-pink-650 hover:text-pink-650 duration-300`}
-                      >
-                        <span className="whitespace-nowrap text-base">
-                          {sub.name}
-                        </span>
-                      </Link>
-                    ))}
-                  </>
-                ) : (
-                  <Link
-                    href={links.route}
-                    onClick={() => {
-                      active == links.route
-                        ? setActive("")
-                        : setActive(links.route);
-                    }}
-                    className={`${
-                      route.pathname == links.route
-                        ? "border-pink-650 text-pink-650"
-                        : "border-transparent"
-                    } flex-x justify-between py-3 px-5 font-medium  border-l-2 hover:border-pink-650 hover:text-pink-650 duration-300`}
-                  >
-                    <span className="whitespace-nowrap text-base">
-                      {links.name}
-                    </span>
-                    {links.sub && (
-                      <BiChevronDown
-                        className={`${
-                          active == links.route && "-rotate-90"
-                        } duration-500`}
-                      />
-                    )}
-                  </Link>
-                )}
-              </div>
-            ))}
-          </motion.aside>
-        )}
-      </AnimatePresence>
+      <MobileMenu
+        isOpen={mobileMenu}
+        activeMenu={active}
+        pathname={route.pathname}
+        setActiveMenu={(active: string) => setActive(active)}
+      />
     </>
   );
 };

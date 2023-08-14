@@ -3,6 +3,7 @@ import Layout from "@/components/Layout/Layout";
 import Link from "next/link";
 import { ChangeEvent, useState } from "react";
 import { toast } from "react-hot-toast";
+import { setCookie } from "cookies-next";
 
 const Signin = () => {
   const [userData, setUserData] = useState({
@@ -19,6 +20,7 @@ const Signin = () => {
       .then((res) => {
         console.log(res.data);
         if (res.data.token) {
+          setCookie("token", res.data.token, { path: "/", maxAge: 86400 });
           toast.success("Success");
           window?.location.replace("/");
         }

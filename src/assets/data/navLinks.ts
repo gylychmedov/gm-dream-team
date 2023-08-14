@@ -41,7 +41,7 @@ export const navLinks: INavLink[] = [
     route: "/contact",
   },
   {
-    name: "Sign up",
-    route: "/user/signup",
+    name: "Sign in",
+    route: "/user/signin",
   },
 ];
