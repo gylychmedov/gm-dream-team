@@ -1,8 +1,10 @@
 import Course from "@/components/Courses/Course";
 import Layout from "@/components/Layout/Layout";
 import useCoursesStore from "@/store/useCourses";
+import useTranslation from "next-translate/useTranslation";
 
 const CoursesPage = () => {
+  const { t } = useTranslation("common");
   const { courses } = useCoursesStore();
   return (
     <Layout title="Courses" className="bg-blue-100/5 py-10">
@@ -10,10 +12,10 @@ const CoursesPage = () => {
         <div className="flex items-center justify-between space-x-4">
           <div className="flex flex-col">
             <h2 className="text-3xl text-gray-900 font-lato-bold">
-              Popular courses for you
+              {t("popular_courses")}
             </h2>
             <span className="text-base text-gray-400 mt-3 font-lato-regular">
-              Get the best course with the best price with world-class tutors
+              {t("popular_description")}
             </span>
           </div>
         </div>

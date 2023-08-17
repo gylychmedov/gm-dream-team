@@ -1,0 +1,13 @@
+{
+  "login": "Login",
+  "username": "Username",
+  "password": "Password",
+  "dont_have_account": "Don’t have an account",
+  "register_here": "Register here",
+  "create_account": "Create account",
+  "your_email": "Your email",
+  "phone": "Phone",
+  "confirm_password": "Confirm password",
+  "already_have_account": "Already have an account",
+  "login_here": "Login here"
+}

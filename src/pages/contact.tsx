@@ -3,15 +3,17 @@ import { TbWorldWww } from "react-icons/tb";
 import { IoShareSocialSharp } from "react-icons/io5";
 import { MdMail } from "react-icons/md";
 import { BiSupport } from "react-icons/bi";
+import useTranslation from "next-translate/useTranslation";
 
 const ContactPage = () => {
+  const { t } = useTranslation("common");
   return (
     <Layout title="Contact">
       <main className="grid grid-cols-12 gap-3 md:pt-5 md:pb-10 lg:gap-10 contain">
         <header className="col-span-12 flex-center py-10  flex-center flex-col">
-          <span className="text-teal-850 font-bold">NEED HELP?</span>
+          <span className="text-teal-850 font-bold">{t("need_help")}?</span>
           <span className="text-gray-900 font-bold text-3xl mt-3">
-            Get in touch with us
+            {t("get_touch")}
           </span>
         </header>
         <section className="col-span-12 md:col-span-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-3 lg:gap-5 group">
@@ -20,7 +22,7 @@ const ContactPage = () => {
               <TbWorldWww size={23} />
             </div>
             <h2 className="mb-2 font-lato-bold text-gray-900 text-lg">
-              Our Website
+              {t("our_website")}
             </h2>
             <div className="text-gray-600">www.gm-dream.team</div>
           </aside>
@@ -29,7 +31,7 @@ const ContactPage = () => {
               <BiSupport size={23} />
             </div>
             <h2 className="mb-2 font-lato-bold text-gray-900 text-lg">
-              Call Us On
+              {t("call_us")}
             </h2>
             <a href="tel:+995599488466" className="text-gray-600">
               +995 599 48 84 66
@@ -40,7 +42,7 @@ const ContactPage = () => {
               <MdMail size={23} />
             </div>
             <h2 className="mb-2 font-lato-bold text-gray-900 text-lg">
-              Email Us
+              {t("email_us")}
             </h2>
             <a
               href="mailto:admin@gm-dream.team"
@@ -55,7 +57,7 @@ const ContactPage = () => {
               <IoShareSocialSharp size={23} />
             </div>
             <h2 className="mb-2 font-lato-bold text-gray-900 text-lg">
-              Social accounts
+              {t("social_accounts")}
             </h2>
             <a
               href="https://www.instagram.com/p/CuMwFvfNn1w/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
@@ -89,7 +91,7 @@ const ContactPage = () => {
           <input className="input" placeholder="Subject" />
           <textarea className="input" placeholder="Your message" rows={3} />
           <button className="bg-pink-650 py-3 text-base rounded-lg text-white">
-            Submit Now
+            {t("submit_now")}
           </button>
         </section>
       </main>

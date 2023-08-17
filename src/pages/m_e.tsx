@@ -1,7 +1,10 @@
 import Layout from "@/components/Layout/Layout";
+import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 
-export default function ConsultationPage() {
+const ConsultationPage = () => {
+  const { t } = useTranslation();
+
   return (
     <Layout title="M & E" className="py-24 sm:py-32 relative isolate">
       <img
@@ -122,11 +125,13 @@ export default function ConsultationPage() {
               href="/contact"
               className="rounded-md bg-pink-650 w-80 text-center py-4 text-sm font-semibold text-white shadow-sm hover:-translate-y-1 duration-500"
             >
-              Contact us
+              {t("navigation:contact")}
             </Link>
           </div>
         </div>
       </div>
     </Layout>
   );
-}
+};
+
+export default ConsultationPage;

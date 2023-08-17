@@ -1,0 +1,13 @@
+{
+  "login": "Войти",
+  "username": "Имя пользователя",
+  "password": "Пароль",
+  "dont_have_account": "Нет учетной записи",
+  "register_here": "Зарегистрируйтесь здесь",
+  "create_account": "Зарегистрироваться",
+  "your_email": "Ваш адрес электронной почты",
+  "phone": "Телефон",
+  "confirm_password": "Подтвердите пароль",
+  "already_have_account": "Уже есть аккаунт",
+  "login_here": "Войти здесь"
+}

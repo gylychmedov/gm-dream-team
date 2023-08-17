@@ -1,7 +1,9 @@
 import Layout from "@/components/Layout/Layout";
+import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 
 const TurnkeyPage = () => {
+  const { t } = useTranslation();
   return (
     <Layout title="Turnkey" className="bg-gray-900">
       <div className="relative isolate overflow-hidden pt-14">
@@ -116,7 +118,7 @@ const TurnkeyPage = () => {
                 href="/contact"
                 className="rounded-md bg-pink-650 w-80 text-center py-4 text-sm font-semibold text-white shadow-sm hover:-translate-y-1 duration-500"
               >
-                Contact us
+                {t("navigation:contact")}
               </Link>
             </div>
           </div>

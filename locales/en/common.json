@@ -1,4 +1,39 @@
 {
-  "title": "Hello world",
-  "courses": "Courses"
+  "course": "Course",
+  "courses": "Courses",
+  "pages": "Pages",
+  "slogan": "Build Bridges, Make a Difference as a Grant Expert!",
+  "all_right_reserved": "All rights reserved.",
+  "popular_courses": "Popular courses for you",
+  "popular_description": "Get the best course with the best price with world-class tutors",
+  "social_links": "Social links",
+  "view_all": "View all",
+  "read_more": "Read more",
+  "lessons": "lessons",
+  "explore_courses": "Explore courses",
+
+  "subscribe_our_newsletter": "Subscribe to our newsletter.",
+  "subscribe_description": "Subscribe to us to keep up to date with our news.",
+  "enter_email": "Enter your email",
+  "subscribe": "Subscribe",
+  "monthly_articles": "Monthly articles",
+  "monthly_articles_description": "We will send monthly updates to your email address",
+  "no_spam": "No spam",
+  "no_spam_desc": " We will not send you any spam emails",
+
+  "need_help": "NEED HELP",
+  "get_touch": "Get in touch with us",
+  "our_website": "Our Website",
+  "call_us": "Call Us On",
+  "email_us": "Email Us",
+  "social_accounts": "Social accounts",
+  "submit_now": "Submit Now",
+  "name": "Name",
+  "phone": "Phone",
+  "subject": "Subject",
+  "your_message": "Your message",
+
+  "welcome_to_the": "Welcome to the",
+  "agency": "agency",
+  "welcome_description": "Unlock Your Grant Management Talent with GM-Dream Team and Make Your Dreams a Reality"
 }

@@ -1,6 +1,8 @@
+import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 
 export default function Banner() {
+  const { t } = useTranslation("common");
   return (
     <>
       <div
@@ -28,11 +30,10 @@ export default function Banner() {
           <div className="lg:w-9/12 bg-black/5 backdrop-blur rounded-xl p-5 lg:flex lg:items-center">
             <div className="">
               <h1 className="text-3xl font-black text-white mb-4 ">
-                Welcome to the <br /> GM-DREAM TEAM agency
+                {t("welcome_to_the")} <br /> GM-Dream Team {t("agency")}
               </h1>
               <h2 className="text-xl leading-relaxed font-medium text-white">
-                Unlock Your Grant Management Talent with GM-Dream Team and Make
-                Your Dreams a Reality
+                {t("welcome_description")}
               </h2>
 
               <div className="flex flex-col sm:flex-row sm:items-center justify-center lg:justify-start space-y-2 sm:space-y-0 sm:space-x-2 pt-10">
@@ -40,7 +41,7 @@ export default function Banner() {
                   href="/contact"
                   className="inline-flex justify-center items-center space-x-2 font-semibold rounded-lg px-7 py-3 leading-6  bg-pink-650 text-white hover:text-white "
                 >
-                  Contact us
+                  {t("navigation:contact")}
                 </Link>
               </div>
             </div>

@@ -3,6 +3,7 @@ import useUserStore from "@/store/useUser";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { BiChevronDown } from "react-icons/bi";
+import useTranslation from "next-translate/useTranslation";
 
 const MobileMenu = ({
   isOpen,
@@ -15,6 +16,7 @@ const MobileMenu = ({
   activeMenu: string;
   setActiveMenu: (active: string) => void;
 }) => {
+  const { t } = useTranslation("navigation");
   const { isAuth, user } = useUserStore();
   return (
     <AnimatePresence>
@@ -45,7 +47,7 @@ const MobileMenu = ({
                       } flex-x justify-between py-4 p-5 font-medium  border-l-2 hover:border-pink-650 hover:text-pink-650 duration-300`}
                     >
                       <span className="whitespace-nowrap text-base">
-                        {sub.name}
+                        {t(sub.name)}
                       </span>
                     </Link>
                   ))}
@@ -75,8 +77,8 @@ const MobileMenu = ({
                     {links.route == "/user/signin"
                       ? isAuth
                         ? user.username.slice(0, 5)
-                        : links.name
-                      : links.name}
+                        : t(links.name)
+                      : t(links.name)}
                   </span>
                   {links.sub && (
                     <BiChevronDown

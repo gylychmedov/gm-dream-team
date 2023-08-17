@@ -1,11 +1,14 @@
 import { api } from "@/common/API";
 import Layout from "@/components/Layout/Layout";
 import { setCookie } from "cookies-next";
+import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 import { ChangeEvent, useState } from "react";
 import { toast } from "react-hot-toast";
 
 const Signup = () => {
+  const { t } = useTranslation("user");
+
   const [userData, setUserData] = useState({
     email: "",
     phone: "",
@@ -55,15 +58,15 @@ const Signup = () => {
         >
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
-              Create account
+              {t("create_account")}
             </h1>
-            <form className="space-y-4 md:space-y-6" action="#">
+            <div className="space-y-4 md:space-y-6">
               <div>
                 <label
                   htmlFor="username"
                   className="block mb-2 text-sm font-medium text-gray-900"
                 >
-                  Username
+                  {t("username")}
                 </label>
                 <input
                   value={userData.username}
@@ -71,7 +74,7 @@ const Signup = () => {
                   name="username"
                   id="username"
                   className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:border-primary-600 block w-full p-2.5 "
-                  placeholder="Username"
+                  placeholder={t("username")}
                   required
                 />
               </div>
@@ -80,7 +83,7 @@ const Signup = () => {
                   htmlFor="email"
                   className="block mb-2 text-sm font-medium text-gray-900"
                 >
-                  Your email
+                  {t("your_email")}
                 </label>
                 <input
                   value={userData.email}
@@ -97,7 +100,7 @@ const Signup = () => {
                   htmlFor="phone"
                   className="block mb-2 text-sm font-medium text-gray-900"
                 >
-                  Phone
+                  {t("phone")}
                 </label>
                 <input
                   value={userData.phone}
@@ -114,7 +117,7 @@ const Signup = () => {
                   htmlFor="password"
                   className="block mb-2 text-sm font-medium text-gray-900"
                 >
-                  Password
+                  {t("password")}
                 </label>
                 <input
                   value={userData.password}
@@ -131,7 +134,7 @@ const Signup = () => {
                   htmlFor="confirm-password"
                   className="block mb-2 text-sm font-medium text-gray-900"
                 >
-                  Confirm password
+                  {t("confirm_password")}
                 </label>
                 <input
                   value={userData.password_confirm}
@@ -143,44 +146,23 @@ const Signup = () => {
                   required
                 />
               </div>
-              {/* <div className="flex items-start">
-                <div className="flex items-center h-5">
-                  <input
-                    id="terms"
-                    aria-describedby="terms"
-                    type="checkbox"
-                    className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300"
-                    required
-                  />
-                </div>
-                <div className="ml-3 text-sm">
-                  <label htmlFor="terms" className="font-light text-gray-500">
-                    I accept the{" "}
-                    <a
-                      className="font-medium text-primary-600 hover:underline "
-                      href="#"
-                    >
-                      Terms and Conditions
-                    </a>
-                  </label>
-                </div>
-              </div> */}
+
               <div
                 onClick={() => handleSubmit()}
                 className="w-full bg-blue-850 text-white bg-primary-600 hover:bg-primary-700  font-medium rounded-lg text-sm px-5 py-3 text-center "
               >
-                Create an account
+                {t("create_account")}
               </div>
               <p className="text-sm font-light text-gray-500">
-                Already have an account?{" "}
+                {t("already_have_account")}?
                 <Link
                   href="/user/signin"
-                  className="font-medium text-primary-600 hover:underline text-blue-500"
+                  className="font-medium text-primary-600 hover:underline text-blue-500 ml-2"
                 >
-                  Login here
+                  {t("login_here")}
                 </Link>
               </p>
-            </form>
+            </div>
           </div>
         </form>
       </div>

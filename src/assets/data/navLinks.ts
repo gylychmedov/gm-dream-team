@@ -2,46 +2,47 @@ import { INavLink } from "@/interfaces/components/INavLink";
 
 export const navLinks: INavLink[] = [
   {
-    name: "Home",
+    name: "home",
     route: "/",
   },
   {
-    name: "About us",
+    name: "about",
     route: "/about",
   },
 
   {
-    name: "Our services",
+    name: "our_services",
     route: "#",
     sub: [
       {
-        name: "Courses",
+        name: "courses",
         route: "/courses",
       },
       {
-        name: "Consultation",
+        name: "consultation",
         route: "/consultation",
       },
       {
-        name: "M&E",
+        name: "m_e",
         route: "/m_e",
       },
       {
-        name: "Turnkey services",
+        name: "turnkey",
         route: "/turnkey",
+      },
+      {
+        name: "for_grantors",
+        route: "/grantors",
       },
     ],
   },
+
   {
-    name: "For Grantors",
-    route: "/grantors",
-  },
-  {
-    name: "Contact us",
+    name: "contact",
     route: "/contact",
   },
   {
-    name: "Sign in",
+    name: "sign_in",
     route: "/user/signin",
   },
 ];

@@ -1,22 +1,21 @@
 import { BsCalendar2Week } from "react-icons/bs";
 import { HiOutlineHandRaised } from "react-icons/hi2";
+import useTranslation from "next-translate/useTranslation";
 
-export default function Subscribe() {
+const Subscribe = () => {
+  const { t } = useTranslation("common");
   return (
     <div className="relative isolate overflow-hidden bg-white py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
           <div className="max-w-xl lg:max-w-lg">
             <h2 className="text-3xl font-bold tracking-tight">
-              Subscribe to our newsletter.
+              {t("subscribe_our_newsletter")}
             </h2>
             <p className="mt-4 text-lg leading-8 text-gray-400">
-              Subscribe to us to keep up to date with our news
+              {t("subscribe_description")}
             </p>
             <div className="mt-6 flex max-w-md gap-x-4">
-              <label htmlFor="email-address" className="sr-only">
-                Email address
-              </label>
               <input
                 id="email-address"
                 name="email"
@@ -24,13 +23,13 @@ export default function Subscribe() {
                 autoComplete="email"
                 required
                 className="min-w-0 outline-none flex-auto rounded-md bg-white/5 px-3.5 py-2  shadow-sm border border-gray-300 sm:text-sm sm:leading-6"
-                placeholder="Enter your email"
+                placeholder={t("enter_email")}
               />
               <button
                 type="submit"
                 className="flex-none rounded-md bg-pink-650 px-3.5 py-2.5 text-sm font-bold text-white shadow-sm"
               >
-                Subscribe
+                {t("subscribe")}
               </button>
             </div>
           </div>
@@ -43,10 +42,10 @@ export default function Subscribe() {
                 />
               </div>
               <dt className="mt-4 font-semibold text-gray-700">
-                Monthly articles
+                {t("monthly_articles")}
               </dt>
               <dd className="mt-2 leading-7 text-gray-400">
-                We will send monthly updates to your email address
+                {t("monthly_articles_description")}
               </dd>
             </div>
             <div className="flex flex-col items-start">
@@ -56,9 +55,11 @@ export default function Subscribe() {
                   aria-hidden="true"
                 />
               </div>
-              <dt className="mt-4 font-semibold text-gray-700">No spam</dt>
+              <dt className="mt-4 font-semibold text-gray-700">
+                {t("no_spam")}
+              </dt>
               <dd className="mt-2 leading-7 text-gray-400">
-                We will not send you any spam emails
+                {t("no_spam_desc")}
               </dd>
             </div>
           </dl>
@@ -78,4 +79,6 @@ export default function Subscribe() {
       </div>
     </div>
   );
-}
+};
+
+export default Subscribe;

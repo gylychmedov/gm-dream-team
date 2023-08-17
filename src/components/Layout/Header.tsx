@@ -8,8 +8,10 @@ import LoaderFullscreen from "../Elements/Loader.fullscreen";
 import { IoMdClose } from "react-icons/io";
 import MobileMenu from "./MobileMenu";
 import useUserStore from "@/store/useUser";
+import useTranslation from "next-translate/useTranslation";
 
 const Header = () => {
+  const { t } = useTranslation("navigation");
   const route = useRouter();
   const { isAuth, user } = useUserStore();
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -34,11 +36,13 @@ const Header = () => {
         <LoaderFullscreen />
       </div>
       <header className="flex-x justify-between bg-white px-4 sticky top-0  z-20">
-        <img
-          src="/logo.svg"
-          className="w-9 cursor-pointer  hover:scale-110 duration-500"
-          alt=""
-        />
+        <Link href={"/"}>
+          <img
+            src="/logo.svg"
+            className="w-9 cursor-pointer  hover:scale-110 duration-500"
+            alt=""
+          />
+        </Link>
 
         <div
           onClick={() => setMobileMenu(!mobileMenu)}
@@ -63,7 +67,7 @@ const Header = () => {
                   } flex-x justify-between py-3 cursor-pointer px-5 font-medium  border-l-2 hover:border-pink-650 hover:text-pink-650 duration-300`}
                 >
                   <span className="whitespace-nowrap text-base">
-                    {links.name}
+                    {t(links.name)}
                   </span>
                   {links.sub && (
                     <BiChevronDown
@@ -97,8 +101,8 @@ const Header = () => {
                     {links.route == "/user/signin"
                       ? isAuth
                         ? user.username.slice(0, 5)
-                        : links.name
-                      : links.name}
+                        : t(links.name)
+                      : t(links.name)}
                   </span>
                   {links.sub && (
                     <BiChevronDown
@@ -118,7 +122,7 @@ const Header = () => {
                       href={sub.route}
                       className="hover:bg-gray-100 py-3 px-5"
                     >
-                      {sub.name}
+                      {t(sub.name)}
                     </Link>
                   ))}
                 </nav>

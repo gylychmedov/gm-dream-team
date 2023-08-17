@@ -1,12 +1,13 @@
 import Layout from "@/components/Layout/Layout";
+import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 
-export default function ConsultationPage() {
+const ConsultationPage = () => {
+  const { t } = useTranslation();
   return (
     <Layout title="Consultation" className="py-24 sm:py-32 relative isolate">
       <img
         src="https://images.unsplash.com/photo-1562564055-71e051d33c19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-        // src="https://images.unsplash.com/photo-1462899006636-339e08d1844e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
         alt=""
         className="absolute inset-0 -z-10 h-full w-full object-cover"
       />
@@ -117,11 +118,13 @@ export default function ConsultationPage() {
               href="/contact"
               className="rounded-md bg-pink-650 w-80 text-center py-4 text-sm font-semibold text-white shadow-sm hover:-translate-y-1 duration-500"
             >
-              Contact us
+              {t("navigation:contact")}
             </Link>
           </div>
         </div>
       </div>
     </Layout>
   );
-}
+};
+
+export default ConsultationPage;

@@ -8,8 +8,10 @@ import { ELocale } from "@/interfaces/core/ELang";
 import useUserStore from "@/store/useUser";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import useTranslation from "next-translate/useTranslation";
 
 const CoursePage = () => {
+  const { t } = useTranslation("common");
   const { query, locale } = useRouter();
   const [detail, setDetail] = useState<ICourseDetail>();
   const [active, setActive] = useState<ILesson>();
@@ -18,17 +20,20 @@ const CoursePage = () => {
   useEffect(() => {
     api.get(`front/course/${query.id}`).then((res) => {
       setDetail(res.data.data);
+      console.log(res.data);
       if (res.data.data?.lessons?.length) {
         setActive(res.data.data.lessons[0]);
       }
     });
   }, [query.id]);
 
+  console.log(detail);
+
   const handleSelect = (lesson: ILesson) => setActive(lesson);
 
   return (
     <Layout
-      title="Course"
+      title={t("course")}
       className="contain px-2 py-5 grid grid-cols-12 gap-x-3  gap-y-3"
     >
       {!isAuth ? (
@@ -37,11 +42,11 @@ const CoursePage = () => {
             links={[
               {
                 link: `/courses`,
-                title: "Courses",
+                title: t("courses"),
               },
               {
                 link: `#`,
-                title: String(detail?.title[locale as ELocale]),
+                title: detail?.title[locale as ELocale] ?? "",
               },
             ]}
           />

@@ -17,7 +17,7 @@ const Layout = ({ children, className, title = "" }: ILayoutProps) => {
   return (
     <main className="bg-gray-50 min-h-screen">
       <Head>
-        <title>GM-Dream tream</title>
+        <title>GM-Dream Team</title>
         <meta
           name="description"
           content="Build Bridges, Make a Difference as a Grant Expert!"

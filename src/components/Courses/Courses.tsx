@@ -3,9 +3,11 @@ import { Autoplay } from "swiper";
 import Link from "next/link";
 import useCoursesStore from "@/store/useCourses";
 import Course from "./Course";
+import useTranslation from "next-translate/useTranslation";
 
 const Courses = () => {
   const { courses } = useCoursesStore();
+  const { t } = useTranslation("common");
 
   return (
     <div className="bg-white py-20">
@@ -14,17 +16,17 @@ const Courses = () => {
           <div className="flex items-center justify-between space-x-4">
             <div className="flex flex-col">
               <h2 className="text-3xl text-gray-900 font-lato-bold">
-                Popular courses for you
+                {t("popular_courses")}
               </h2>
               <span className="text-base text-gray-400 mt-3 font-lato-regular">
-                Get the best course with the best price with world-class tutors
+                {t("popular_description")}
               </span>
             </div>
             <Link
               href="/courses"
               className="whitespace-nowrap text-sm font-medium text-indigo-600 hover:text-indigo-500"
             >
-              View all
+              {t("view_all")}
               <span aria-hidden="true"> &rarr;</span>
             </Link>
           </div>

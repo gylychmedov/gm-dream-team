@@ -4,8 +4,10 @@ import Link from "next/link";
 import { ChangeEvent, useState } from "react";
 import { toast } from "react-hot-toast";
 import { setCookie } from "cookies-next";
+import useTranslation from "next-translate/useTranslation";
 
 const Signin = () => {
+  const { t } = useTranslation("user");
   const [userData, setUserData] = useState({
     username: "",
     password: "",
@@ -47,15 +49,15 @@ const Signin = () => {
         >
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
-              Login
+              {t("login")}
             </h1>
-            <form className="space-y-4 md:space-y-6" action="#">
+            <div className="space-y-4 md:space-y-6">
               <div>
                 <label
                   htmlFor="username"
                   className="block mb-2 text-sm font-medium text-gray-900"
                 >
-                  Username
+                  {t("username")}
                 </label>
                 <input
                   type="text"
@@ -71,7 +73,7 @@ const Signin = () => {
                   htmlFor="password"
                   className="block mb-2 text-sm font-medium text-gray-900"
                 >
-                  Password
+                  {t("password")}
                 </label>
                 <input
                   type="password"
@@ -87,18 +89,18 @@ const Signin = () => {
                 onClick={() => handleSubmit()}
                 className="w-full bg-blue-850 text-white bg-primary-600 hover:bg-primary-700  font-medium rounded-lg text-sm px-5 py-3 text-center "
               >
-                Login
+                {t("login")}
               </div>
               <p className="text-sm font-light text-gray-500">
-                Don’t have an account?
+                {t("dont_have_account")}?
                 <Link
                   href="/user/signup"
                   className="font-medium text-primary-600 hover:underline ml-2 text-blue-500"
                 >
-                  Register here
+                  {t("register_here")}
                 </Link>
               </p>
-            </form>
+            </div>
           </div>
         </form>
       </div>
