@@ -3,7 +3,7 @@ import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 
 const TurnkeyPage = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("services");
   return (
     <Layout title="Turnkey" className="bg-gray-900">
       <div className="relative isolate overflow-hidden pt-14">
@@ -29,88 +29,46 @@ const TurnkeyPage = () => {
           <div className="">
             <h1 className="text-center flex-center space-x-6 text-4xl font-bold tracking-tight text-white sm:text-6xl">
               <img src="/key.png" className="w-20" alt="key" />
-              <span>Turnkey services</span>
+              <span>{t("turnkey_11")}</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Turnkey Grant Management Services: Simplifying the Funding Process
+              {t("turnkey_1")}
             </p>
 
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Welcome to our webpage dedicated to turnkey grant management
-              services. If you or your organization are seeking financial
-              assistance for projects, programs, or research, navigating the
-              complex world of grants can be overwhelming. That's where turnkey
-              grant management services come in. Our team provides comprehensive
-              solutions to streamline the grant application, management, and
-              reporting processes, allowing you to focus on achieving your
-              goals. In this web page, we will explore the key features,
-              benefits, and steps involved in our turnkey grant management
-              services.
+              {t("turnkey_2")}
+
               <br />
-              The agency's turnkey grant management services cover various
-              crucial aspects of the grant lifecycle, including organizations'
-              training on a grant management process. This includes conducting
-              thorough research to identify suitable funding opportunities that
-              align with the organization's goals and priorities. The "GM-Dream
-              Team" leverages its expertise and extensive network to identify
-              relevant grantor organizations and funding sources that are most
-              likely to support the organization's project ideas.
+              {t("turnkey_3")}
             </p>
 
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Once potential funding opportunities are identified, the agency
-              assists in the preparation and composition of high-quality grant
-              proposals. Our experienced team of grant writers crafts compelling
-              narratives, ensuring that the proposals effectively communicate
-              the organization's objectives, activities, and anticipated impact.
-              They pay careful attention to aligning the proposal with the
-              specific requirements and guidelines set by the grantor
-              organizations.
+              {t("turnkey_4")}
             </p>
 
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Upon successful grant awards, the "GM-Dream Team" continues to
-              support the organization through coaching the organization's grant
-              management team on the efficient grant project management
-              throughout the entire grant lifecycle. This includes setting up
-              proper project monitoring and evaluation systems, ensuring that
-              progress is tracked, and project outcomes are measured against
-              predefined indicators. We provide consultation in financial
-              management, ensuring that funds are allocated appropriately and
-              transparently, and adhere to the grantor's reporting requirements.
+              {t("turnkey_5")}
             </p>
 
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Moreover, the agency provides guidance and support in compliance
-              with all relevant regulations and policies to ensure the smooth
-              execution of the grant project. Our team couches you on handling
-              grant-related administrative tasks, and helps mitigate any
-              potential challenges that may arise during the project
-              implementation phase.
+              {t("turnkey_6")}
             </p>
 
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              By offering turnkey grant management services, the "GM-Dream Team"
-              grant agency becomes a valuable partner for organizations looking
-              to maximize their chances of securing grants and effectively
-              managing them. This comprehensive approach provides support at
-              each step of a grant management process.
+              {t("turnkey_7")}
             </p>
 
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Contact Us
+              {t("navigation:contact")}
               <br />
-              If you're seeking professional grant management services or have
-              any inquiries, we would love to hear from you. Please reach out to
-              our team using the contact information below:
+              {t("turnkey_8")}
               <br />
-              Email: admin@gm-dream.team
+              {t("turnkey_9")}
               <br />
             </p>
 
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Thank you for visiting our website, and we look forward to
-              assisting you in your grant management endeavors!
+              {t("turnkey_10")}
             </p>
 
             <div className="mt-10 flex items-center justify-center gap-x-6">

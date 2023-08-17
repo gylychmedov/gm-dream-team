@@ -1,3 +1,4 @@
+import { IDocument } from "./IDocument";
 import { ILang } from "./ILang";
 import { ILesson } from "./ILesson";
 
@@ -7,4 +8,5 @@ export interface ICourseDetail {
   description: ILang;
   image: string;
   lessons: ILesson[];
+  documents: IDocument[];
 }

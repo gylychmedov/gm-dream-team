@@ -3,14 +3,13 @@ import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 
 const ForGrantorsPage = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("services");
 
   return (
     <Layout title="For Grantors" className="bg-gray-900">
       <div className="relative isolate overflow-hidden pt-14">
         <img
           src="https://images.unsplash.com/photo-1631739645979-350007ae2a30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-          // src="https://images.unsplash.com/photo-1462899006636-339e08d1844e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
           alt=""
           className="absolute inset-0 -z-10 h-full w-full object-cover"
         />
@@ -30,93 +29,44 @@ const ForGrantorsPage = () => {
         <div className="mx-auto max-w-5xl py-32 sm:py-20 lg:py-36 px-3 sm:px-5">
           <div className="">
             <h1 className="text-center text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              <span>For Grantors</span>
+              <span>{t("navigation:for_grantors")}</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Welcome to the "GM-Dream Team" grant agency! We are your dedicated
-              partner in bridging the gap between grantor and grantee
-              organizations. Our agency plays a vital role in educating
-              potential grantee organizations about grant policies and
-              requirements, ensuring a seamless and effective grant management
-              process for both parties.
+              {t("grantors_1")}
             </p>
 
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              At the "GM-Dream Team" grant agency, we understand the importance
-              of establishing strong connections between grantor and grantee
-              organizations. We serve as a reliable link, facilitating
-              communication, understanding, and collaboration between these two
-              crucial entities. Our goal is to ensure that grantor organizations
-              find suitable and capable grantees who can effectively implement
-              projects aligned with their mission and goals.
+              {t("grantors_2")}
             </p>
 
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              One of the key services we offer to grantor organizations is the
-              education and training of potential grantee organizations. We
-              recognize that grant policies and requirements can sometimes be
-              complex and overwhelming, particularly for organizations new to
-              the grant-seeking process. Our agency is here to simplify and
-              demystify these policies, guiding potential grantees through every
-              step of the way.
+              {t("grantors_4")}
             </p>
 
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Our team of experienced professionals provides comprehensive
-              training sessions and consultations for potential grantees. We
-              familiarize them with the grant application process, help them
-              understand the specific requirements of grantor organizations, and
-              offer guidance on how to craft competitive grant proposals.
+              {t("grantors_4")}
             </p>
 
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              By educating potential grantees on grant policies and
-              requirements, we contribute to streamlining the overall grant
-              management process. When potential grantees have a clear
-              understanding of what grantor organizations expect, they can
-              tailor their proposals accordingly, leading to more efficient and
-              effective grant applications.
+              {t("grantors_5")}
             </p>
 
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              We work closely with grantor organizations to understand their
-              priorities, funding objectives, and desired outcomes. Through this
-              collaboration, we provide valuable insights to potential grantees,
-              ensuring that their project ideas align with the mission and goals
-              of the grantor organizations. This alignment increases the chances
-              of successful grant applications and promotes a strong partnership
-              between grantor and grantee organizations.
+              {t("grantors_6")}
             </p>
 
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              At the "GM-Dream Team" grant agency, we believe in building a
-              stronger grant community by fostering knowledge sharing and
-              collaboration. Through our educational efforts, we empower
-              potential grantees to develop the skills and expertise necessary
-              to navigate the grant landscape successfully. By equipping them
-              with the knowledge of grant policies and requirements, we
-              contribute to the growth and development of capable grantees who
-              can drive positive change in their communities.
+              {t("grantors_7")}
             </p>
 
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Partner with Us:
+              {t("grantors_8")}
               <br />
-              We invite grantor organizations to partner with us in creating a
-              thriving grant ecosystem. By collaborating with the "GM-dream
-              team" grant agency, you can access a pool of well-informed and
-              competent potential grantees who are equipped to meet your
-              specific requirements. Together, we can ensure that your grants
-              are awarded to deserving organizations that have the capacity to
-              make a lasting impact.
+              {t("grantors_9")}
             </p>
 
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Contact us today to learn more about how we can support your
-              grantor organization and be a catalyst for positive change through
-              effective grant management education and assistance. Let's work
-              together to empower potential grantees and create a brighter
-              future for our communities.
+              {t("grantors_10")}
             </p>
 
             <div className="mt-10 flex items-center justify-center gap-x-6">

@@ -9,6 +9,7 @@ import useUserStore from "@/store/useUser";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import useTranslation from "next-translate/useTranslation";
+import { IDocument } from "@/interfaces/api/IDocument";
 
 const CoursePage = () => {
   const { t } = useTranslation("common");
@@ -36,7 +37,7 @@ const CoursePage = () => {
       title={t("course")}
       className="contain px-2 py-5 grid grid-cols-12 gap-x-3  gap-y-3"
     >
-      {!isAuth ? (
+      {!isAuth || !active ? (
         <>
           <Breadcrumb
             links={[
@@ -122,6 +123,15 @@ const CoursePage = () => {
         </section>
       )}
     </Layout>
+  );
+};
+
+export const Document = ({ document }: { document: IDocument }) => {
+  return (
+    <aside>
+      <div></div>
+      <div></div>
+    </aside>
   );
 };
 
