@@ -10,8 +10,10 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import useTranslation from "next-translate/useTranslation";
 import { IDocument } from "@/interfaces/api/IDocument";
+import { getCookie } from "cookies-next";
 
 const CoursePage = () => {
+  const token = getCookie("token");
   const { t } = useTranslation("common");
   const { query, locale } = useRouter();
   const [detail, setDetail] = useState<ICourseDetail>();
@@ -19,13 +21,21 @@ const CoursePage = () => {
   const { isAuth } = useUserStore();
 
   useEffect(() => {
-    api.get(`front/course/${query.id}`).then((res) => {
-      setDetail(res.data.data);
-      console.log(res.data);
-      if (res.data.data?.lessons?.length) {
-        setActive(res.data.data.lessons[0]);
-      }
-    });
+    token
+      ? api.get(`front/course/${query.id}`).then((res) => {
+          setDetail(res.data.data);
+          console.log(res.data);
+          if (res.data.data?.lessons?.length) {
+            setActive(res.data.data.lessons[0]);
+          }
+        })
+      : api.get(`front/course/${query.id}/info`).then((res) => {
+          setDetail(res.data.data);
+          console.log(res.data);
+          if (res.data.data?.lessons?.length) {
+            setActive(res.data.data.lessons[0]);
+          }
+        });
   }, [query.id]);
 
   console.log(detail);
@@ -61,9 +71,12 @@ const CoursePage = () => {
                 {detail?.title[locale as ELocale]}
               </h1>
 
-              <p className="mt-6 text-gray-500 text-base">
-                {detail?.description[locale as ELocale]}
-              </p>
+              <div
+                className="mt-6 text-gray-500 text-base"
+                dangerouslySetInnerHTML={{
+                  __html: String(detail?.description[locale as ELocale]),
+                }}
+              />
             </div>
           </section>
         </>
@@ -101,9 +114,12 @@ const CoursePage = () => {
                   {active.coures_title[locale as ELocale]}
                 </h3>
 
-                <p className="mt-6 text-gray-500 text-base">
-                  {active.description[locale as ELocale]}
-                </p>
+                <div
+                  className="mt-6 text-gray-500 text-base"
+                  dangerouslySetInnerHTML={{
+                    __html: active.description[locale as ELocale],
+                  }}
+                />
               </div>
             </section>
           </>

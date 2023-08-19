@@ -3,9 +3,11 @@ import { AiOutlineTeam } from "react-icons/ai";
 import { HiArrowLongRight, HiOutlineDocumentText } from "react-icons/hi2";
 import { RiKey2Line } from "react-icons/ri";
 import useTranslation from "next-translate/useTranslation";
+import { useRouter } from "next/router";
 
 const Services = () => {
   const { t } = useTranslation("navigation");
+  const { locale } = useRouter();
   return (
     <div className="relative z-0 py-10 w-full overflow-x-hidden">
       <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl py-10 lg:px-8 lg:py-20">
@@ -22,11 +24,9 @@ const Services = () => {
             <AiOutlineTeam size={46} className="text-blue-600 mb-2" />
             <h4 className="text-lg font-bold mb-2">1. {t("consultation")}</h4>
             <p className="leading-relaxed text-gray-600 line-clamp-6 ">
-              At the GM-Dream Team we understand that managing grants can be a
-              complex and challenging task. Whether you are a nonprofit
-              organization, a research institution, or a private entity,
-              securing and effectively managing grants is crucial for the
-              success and sustainability of your projects.
+              {locale == "en"
+                ? "At the GM-Dream Team we understand that managing grants can be a complex and challenging task. Whether you are a nonprofit organization, a research institution, or a private entity, securing and effectively managing grants is crucial for the success and sustainability of your projects. "
+                : "В команде «GM-Dream Team» мы понимаем, что управление грантами может быть сложной задачей. Независимо от того, являетесь ли вы некоммерческой организацией, исследовательским учреждением или частным лицом, получение грантов и эффективное управление ими имеют решающее значение для успеха и устойчивости ваших проектов."}
             </p>
             <div className="mt-3 text-blue-600 flex items-center space-x-2">
               <span>{t("common:read_more")}</span>
@@ -44,11 +44,9 @@ const Services = () => {
 
             <h4 className="text-lg font-bold mb-2">2. {t("turnkey")}</h4>
             <p className="leading-relaxed text-gray-600 line-clamp-6">
-              Welcome to our webpage dedicated to turnkey grant management
-              services. If you or your organization are seeking financial
-              assistance for projects, programs, or research, navigating the
-              complex world of grants can be overwhelming. That's where turnkey
-              grant management services come in.
+              {locale == "en"
+                ? "Welcome to our webpage dedicated to turnkey grant management services. If you or your organization are seeking financial assistance for projects, programs, or research, navigating the complex world of grants can be overwhelming. That's where turnkey grant management services come in."
+                : "Добро пожаловать на нашу веб-страницу, посвященную услугам по управлению грантами «под ключ». Если вы или ваша организация ищете финансовую помощь для проектов, программ или исследований, ориентироваться в  мире грантов может быть сложно. Поэтому мы предлагаем услуги по управлению грантами «под ключ». Наша команда предлагает комплексные решения для оптимизации процессов подачи заявок на гранты, управления грантовым проектом и состовлением отчетности, что позволяет вам сосредоточиться на достижении ваших целей."}
             </p>
             <div className="mt-3 text-blue-600 flex items-center space-x-2">
               <span>{t("common:read_more")}</span>
@@ -66,11 +64,9 @@ const Services = () => {
 
             <h4 className="text-lg font-bold mb-2">3. {t("m_e")}</h4>
             <p className="leading-relaxed text-gray-600 line-clamp-6">
-              We understand the importance of assessing and measuring the impact
-              of your grant-funded projects. A robust performance evaluation and
-              monitoring plan are essential for demonstrating the effectiveness
-              of your programs, improving project outcomes, and ensuring
-              accountability to your funders and stakeholders.
+              {locale == "en"
+                ? "We understand the importance of assessing and measuring the impact of your grant-funded projects. A robust performance evaluation and monitoring plan are essential for demonstrating the effectiveness of your programs, improving project outcomes, and ensuring accountability to your funders and stakeholders."
+                : "Мы понимаем важность М&О воздействия ваших проектов, профинансированных  грантом. Надежный план М&О необходим для демонстрации эффективности ваших программ, улучшения результатов проекта и обеспечения подотчетности перед вашими спонсорами. Мы уделяем особое внимание созданию плана М&О гранта на каждом этапе жизненного цикла гранта."}
             </p>
             <div className="mt-3 text-blue-600 flex items-center space-x-2">
               <span>{t("common:read_more")}</span>

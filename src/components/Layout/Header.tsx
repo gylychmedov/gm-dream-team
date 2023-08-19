@@ -9,6 +9,7 @@ import { IoMdClose } from "react-icons/io";
 import MobileMenu from "./MobileMenu";
 import useUserStore from "@/store/useUser";
 import useTranslation from "next-translate/useTranslation";
+import { AiOutlineGlobal } from "react-icons/ai";
 
 const Header = () => {
   const { t } = useTranslation("navigation");
@@ -44,11 +45,16 @@ const Header = () => {
           />
         </Link>
 
-        <div
-          onClick={() => setMobileMenu(!mobileMenu)}
-          className="md:hidden cursor-pointer border w-10 h-10 shrink-0 flex-center rounded-lg border-gray-100"
-        >
-          {mobileMenu ? <IoMdClose size={20} /> : <RiMenu5Fill size={20} />}
+        <div className="flex-x">
+          <div className="md:hidden">
+            <LanguageSwitcher />
+          </div>
+          <div
+            onClick={() => setMobileMenu(!mobileMenu)}
+            className="md:hidden cursor-pointer border w-10 h-10 shrink-0 flex-center rounded-lg border-gray-100"
+          >
+            {mobileMenu ? <IoMdClose size={20} /> : <RiMenu5Fill size={20} />}
+          </div>
         </div>
         <nav className="flex-x space-x-1 hidden md:flex">
           {navLinks.map((links) => (
@@ -129,11 +135,12 @@ const Header = () => {
               )}
             </div>
           ))}
+          <div className="hidden md:block">
+            <LanguageSwitcher />
+          </div>
         </nav>
       </header>
-      <div>
-        <span></span>
-      </div>
+
       <MobileMenu
         isOpen={mobileMenu}
         activeMenu={active}
@@ -141,6 +148,45 @@ const Header = () => {
         setActiveMenu={(active: string) => setActive(active)}
       />
     </>
+  );
+};
+
+const LanguageSwitcher = () => {
+  const { asPath, locale } = useRouter();
+  const [langModal, setLangModal] = useState(false);
+
+  return (
+    <div className="relative">
+      <div
+        className="px-3 py-2 flex-x hover:bg-gray-50 "
+        onClick={() => setLangModal(!langModal)}
+      >
+        <img src={`/flags/${locale}.svg`} className="w-7" alt="RU" />
+      </div>
+
+      {langModal && (
+        <div className="absolute top-10 right-0 w-24 bg-white rounded-lg overflow-hidden flex flex-col">
+          <Link
+            href={asPath}
+            className="px-3 py-2 flex-x hover:bg-gray-50 "
+            locale="ru"
+            onClick={() => setLangModal(false)}
+          >
+            <img src="/flags/ru.svg" className="w-7" alt="RU" />
+            <span>RU</span>
+          </Link>
+          <Link
+            href={asPath}
+            className="px-3 py-2 flex-x hover:bg-gray-50 "
+            locale="en"
+            onClick={() => setLangModal(false)}
+          >
+            <img src="/flags/en.svg" className="w-7" alt="EN" />
+            <span>EN</span>
+          </Link>
+        </div>
+      )}
+    </div>
   );
 };
 
