@@ -70,13 +70,14 @@ const CoursePage = () => {
               <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
                 {detail?.title[locale as ELocale]}
               </h1>
-
-              <div
-                className="mt-6 text-gray-500 text-base"
-                dangerouslySetInnerHTML={{
-                  __html: String(detail?.description[locale as ELocale]),
-                }}
-              />
+              {detail?.description && (
+                <div
+                  className="mt-6 text-gray-500 text-base"
+                  dangerouslySetInnerHTML={{
+                    __html: String(detail.description[locale as ELocale]),
+                  }}
+                />
+              )}
             </div>
           </section>
         </>
@@ -106,6 +107,20 @@ const CoursePage = () => {
                 <img src={active.image} className="w-full rounded-t-lg" />
               )}
 
+              {detail && detail.documents.length > 0 && (
+                <div className="my-4 px-2">
+                  {detail.documents.map((el) => (
+                    <div className="bg-blue-50 flex-x p-2 rounded-lg`">
+                      <div className="bg-blue-100 py-5 px-5 rounded-lg">s</div>
+                      <div className="flex flex-col">
+                        <span>{el.title[locale as ELocale]}</span>
+                        <span>{el.description[locale as ELocale]}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+
               <div className="mt-10 px-5 pb-5">
                 <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
                   {active.title[locale as ELocale]}
@@ -113,13 +128,14 @@ const CoursePage = () => {
                 <h3 className="text-xl text-gray-700 font-medium mt-3">
                   {active.coures_title[locale as ELocale]}
                 </h3>
-
-                <div
-                  className="mt-6 text-gray-500 text-base"
-                  dangerouslySetInnerHTML={{
-                    __html: active.description[locale as ELocale],
-                  }}
-                />
+                {active?.description && (
+                  <div
+                    className="mt-6 text-gray-500 text-base"
+                    dangerouslySetInnerHTML={{
+                      __html: active.description[locale as ELocale],
+                    }}
+                  />
+                )}
               </div>
             </section>
           </>
