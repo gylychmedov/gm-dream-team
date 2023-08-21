@@ -8,4 +8,5 @@ export interface IDocument {
   locale: "RU" | "EN";
   coures_title: ILang;
   created_at: string;
+  video_id: number;
 }
