@@ -3,82 +3,93 @@
 @tailwind utilities;
 
 @layer base {
-    body {
-        @apply text-sm font-lato-regular outline-none select-none
+  body {
+    @apply text-sm font-lato-regular outline-none select-none;
+  }
+
+  .contain {
+    @apply container mx-auto px-3;
+  }
+
+  .flex-x {
+    @apply flex items-center space-x-3;
+  }
+
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .input {
+    @apply outline-none px-4 py-3.5 rounded-lg shadow-xl shadow-gray-100;
+  }
+}
+
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
     }
 
-    .contain {
-        @apply container mx-auto px-3
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
     }
-
-    .flex-x {
-        @apply flex items-center space-x-3
-    }
-
-    .flex-center {
-        @apply flex justify-center items-center
-    }
-
-    .input {
-        @apply outline-none px-4 py-3.5 rounded-lg shadow-xl shadow-gray-100
-    }
-
+  }
 }
 
 @font-face {
-    font-family: "Lato-Bold";
-    src: url("/fonts/Lato-Bold.ttf");
-    font-display: "swap"
+  font-family: "Lato-Bold";
+  src: url("/fonts/Lato-Bold.ttf");
+  font-display: "swap";
 }
-
 
 @font-face {
-    font-family: "Lato-Regular";
-    src: url("/fonts/Lato-Regular.ttf");
-    font-display: "swap"
+  font-family: "Lato-Regular";
+  src: url("/fonts/Lato-Regular.ttf");
+  font-display: "swap";
 }
-
 
 /* Loader */
 .st0 {
-    fill: transparent;
+  fill: transparent;
 }
 
 .loader {
-    width: 12em;
-    height: 12em;
+  width: 12em;
+  height: 12em;
 }
 
 .loader path {
-    stroke: yellow;
-    stroke-width: 0.6px;
-    animation: dashArray 3s ease-in-out infinite,
-        dashOffset 3s linear infinite;
+  stroke: yellow;
+  stroke-width: 0.6px;
+  animation: dashArray 3s ease-in-out infinite, dashOffset 3s linear infinite;
 }
 
 @keyframes dashArray {
-    0% {
-        fill: rgba(255, 255, 255, .5);
-        stroke-dasharray: 0 1 359 0;
-    }
+  0% {
+    fill: rgba(255, 255, 255, 0.5);
+    stroke-dasharray: 0 1 359 0;
+  }
 
-    50% {
-        fill: rgba(255, 255, 255, .5);
-        stroke-dasharray: 0 359 1 0;
-    }
+  50% {
+    fill: rgba(255, 255, 255, 0.5);
+    stroke-dasharray: 0 359 1 0;
+  }
 
-    100% {
-        fill: rgba(255, 255, 255, .5);
-        stroke-dasharray: 359 1 0 0;
-    }
+  100% {
+    fill: rgba(255, 255, 255, 0.5);
+    stroke-dasharray: 359 1 0 0;
+  }
 }
 
 @keyframes dashOffset {
-    0% {
-        stroke-dashoffset: 365;
-    }
+  0% {
+    stroke-dashoffset: 365;
+  }
 
-    100% {
-        stroke-dashoffset: 5;
-    }
+  100% {
+    stroke-dashoffset: 5;
+  }
 }

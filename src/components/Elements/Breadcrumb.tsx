@@ -5,7 +5,7 @@ import { BsChevronRight } from "react-icons/bs";
 
 const Breadcrumb = ({ links }: IBreadcrumbProps) => {
   return (
-    <nav className="flex col-span-12 space-x-4 rounded-md bg-white w-full px-6 shadow-xl overflow-hidden shadow-gray-100 border border-gray-100">
+    <nav className="flex col-span-12 overflow-x-auto no-scrollbar space-x-4 rounded-md bg-white w-full px-6 shadow-xl overflow-hidden shadow-gray-100 border border-gray-100">
       <Link
         href="/"
         className="flex items-center text-gray-400 hover:text-gray-500"
@@ -18,7 +18,7 @@ const Breadcrumb = ({ links }: IBreadcrumbProps) => {
             <BsChevronRight className="h-full w-12 text-gray-100" />
             <Link
               href={el.link}
-              className="ml-2 text-sm font-medium text-gray-500 hover:text-gray-700"
+              className="ml-2 text-sm whitespace-nowrap font-medium text-gray-500 hover:text-gray-700"
             >
               {el.title}
             </Link>
