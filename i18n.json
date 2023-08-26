@@ -2,6 +2,6 @@
   "locales": ["ru", "en"],
   "defaultLocale": "ru",
   "pages": {
-    "*": ["common", "navigation", "user", "services"]
+    "*": ["common", "navigation", "user", "services", "about"]
   }
 }
