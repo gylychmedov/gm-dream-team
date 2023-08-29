@@ -5,7 +5,7 @@
   "slogan": "Build Bridges, Make a Difference as a Grant Expert!",
   "all_right_reserved": "All rights reserved.",
   "popular_courses": "Popular courses for you",
-  "popular_description": "Get the best course with the best price with world-class tutors",
+  "popular_description": "Get the best course at the best price with world class experts",
   "social_links": "Social links",
   "view_all": "View all",
   "read_more": "Read more",
@@ -30,6 +30,7 @@
   "submit_now": "Submit Now",
   "name": "Name",
   "phone": "Phone",
+  "email": "Email",
   "subject": "Subject",
   "your_message": "Your message",
 

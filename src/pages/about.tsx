@@ -16,7 +16,7 @@ const AboutPage = () => {
           <img
             src="/images/pages/about.png"
             alt=""
-            className="w-full h-96 object-cover rounded-xl mt-10"
+            className="w-full rounded-xl mt-10"
           />
         </section>
         <section className="col-span-12 md:col-span-6 flex items-start flex-col">

@@ -56,7 +56,7 @@ const ContactPage = () => {
             <div className="bg-orange-500/10 w-14 h-14 flex-center rounded-full text-orange-500 mb-5">
               <IoShareSocialSharp size={23} />
             </div>
-            <h2 className="mb-2 font-lato-bold text-gray-900 text-lg">
+            <h2 className="mb-2 font-lato-bold text-gray-900 text-lg text-center">
               {t("social_accounts")}
             </h2>
             <a
@@ -85,11 +85,15 @@ const ContactPage = () => {
           </aside>
         </section>
         <section className="col-span-12 md:col-span-6 flex flex-col space-y-4">
-          <input className="input" placeholder="Name*" />
-          <input className="input" placeholder="Email*" />
-          <input className="input" placeholder="Phone" />
-          <input className="input" placeholder="Subject" />
-          <textarea className="input" placeholder="Your message" rows={3} />
+          <input className="input" placeholder={`${t("name")}*`} />
+          <input className="input" placeholder={`${t("email")}*`} />
+          <input className="input" placeholder={t("phone")} />
+          <input className="input" placeholder={t("subject")} />
+          <textarea
+            className="input"
+            placeholder={t("your_message")}
+            rows={3}
+          />
           <button className="bg-pink-650 py-3 text-base rounded-lg text-white">
             {t("submit_now")}
           </button>
