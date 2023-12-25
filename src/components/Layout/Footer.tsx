@@ -98,7 +98,7 @@ const Footer = () => {
         </div>
 
         <p className="text-xs">
-          &copy; 2023 GM-Dream Team. {t("common:all_right_reserved")}
+          Copyright  &copy; GM-Dream Team, LLC. {t("common:all_right_reserved")}
         </p>
       </div>
     </footer>
