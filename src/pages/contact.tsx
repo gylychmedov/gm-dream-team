@@ -4,9 +4,34 @@ import { IoShareSocialSharp } from "react-icons/io5";
 import { MdMail } from "react-icons/md";
 import { BiSupport } from "react-icons/bi";
 import useTranslation from "next-translate/useTranslation";
+import { ChangeEvent, useState } from "react";
+import { api } from "@/common/API";
+import toast from "react-hot-toast";
+
+const initalState = {
+  name: "",
+  mail: "",
+  subject: "",
+  text: "",
+};
 
 const ContactPage = () => {
   const { t } = useTranslation("common");
+  const [formData, setFormData] = useState(initalState);
+  const handleChange = (e: ChangeEvent<HTMLFormElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: ChangeEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    api.post("front/contact_us", { ...formData }).then((res) => {
+      if ((res.data.message = "success")) {
+        toast.success(t("message_sent"));
+        setFormData(initalState);
+      }
+    });
+  };
+
   return (
     <Layout title="Contact">
       <main className="grid grid-cols-12 gap-3 md:pt-5 md:pb-10 lg:gap-10 contain">
@@ -33,8 +58,8 @@ const ContactPage = () => {
             <h2 className="mb-2 font-lato-bold text-gray-900 text-lg">
               {t("call_us")}
             </h2>
-            <a href="tel:+995599488466" className="text-gray-600">
-              +995 599 48 84 66
+            <a href="tel:+995591100467" className="text-gray-600">
+              +995 591 10 04 67
             </a>
           </aside>
           <aside className="bg-white flex-center px-4 py-6 lg:p-10 flex-col rounded-lg shadow-xl shadow-gray-100 group-hover:blur hover:!blur-0 group-hover:scale-90 hover:!scale-110 duration-500 cursor-default">
@@ -84,20 +109,54 @@ const ContactPage = () => {
             </a>
           </aside>
         </section>
-        <section className="col-span-12 md:col-span-6 flex flex-col space-y-4">
-          <input className="input" placeholder={`${t("name")}*`} />
-          <input className="input" placeholder={`${t("email")}*`} />
-          <input className="input" placeholder={t("phone")} />
-          <input className="input" placeholder={t("subject")} />
-          <textarea
+        <form
+          onChange={handleChange}
+          onSubmit={handleSubmit}
+          className="col-span-12 md:col-span-6 flex flex-col space-y-4"
+        >
+          <input
+            value={formData.name}
+            required
             className="input"
+            name="name"
+            placeholder={`${t("name")}*`}
+          />
+          <input
+            value={formData.mail}
+            required
+            className="input"
+            name="mail"
+            type="email"
+            placeholder={`${t("email")}*`}
+          />
+          {/* <input
+            required
+            className="input"
+            name="phone"
+            placeholder={t("phone")}
+          /> */}
+          <input
+            value={formData.subject}
+            required
+            className="input"
+            name="subject"
+            placeholder={t("subject")}
+          />
+          <textarea
+            value={formData.text}
+            required
+            className="input"
+            name="text"
             placeholder={t("your_message")}
             rows={3}
           />
-          <button className="bg-pink-650 py-3 text-base rounded-lg text-white">
+          <button
+            type="submit"
+            className="bg-pink-650 py-3 text-base rounded-lg text-white"
+          >
             {t("submit_now")}
           </button>
-        </section>
+        </form>
       </main>
     </Layout>
   );
