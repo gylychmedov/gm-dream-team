@@ -77,6 +77,9 @@ const AboutPage = () => {
           src="https://v4.cdnpk.net/videvo_files/video/free/video0464/large_watermarked/_import_611b5585777d85.29325813_FPpreview.mp4"
           poster="https://v4.cdnpk.net/videvo_files/video/free/video0464/thumbnails/_import_611b5585777d85.29325813_small.jpg?item_id=168852"
         /> */}
+        {/* <section className="col-span-12">
+          <Team />
+        </section> */}
       </main>
     </Layout>
   );

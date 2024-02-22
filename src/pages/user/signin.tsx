@@ -5,8 +5,10 @@ import { ChangeEvent, useState } from "react";
 import { toast } from "react-hot-toast";
 import { setCookie } from "cookies-next";
 import useTranslation from "next-translate/useTranslation";
+import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 
 const Signin = () => {
+  const [showPassword, setShowPassword] = useState(false);
   const { t } = useTranslation("user");
   const [userData, setUserData] = useState({
     username: "",
@@ -27,7 +29,7 @@ const Signin = () => {
           window?.location.replace("/");
         }
       })
-      .catch((e) => toast.error(e.message));
+      .catch((e) => toast.error(e.response.data.message));
   };
 
   const handleChange = (e: ChangeEvent<HTMLFormElement>) =>
@@ -75,14 +77,35 @@ const Signin = () => {
                 >
                   {t("password")}
                 </label>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="••••••••"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg  focus:border-primary-600 block w-full p-2.5 "
-                  required
-                />
+                <div className="relative">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    name="password"
+                    id="password"
+                    placeholder="••••••••"
+                    className="bg-gray-50 pr-12 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:border-primary-600 block w-full p-2.5 "
+                    required
+                  />{" "}
+                  <div
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute top-0.5 bottom-0.5 right-0.5  px-2 min-w-[48px] -ml-0.5 flex items-center rounded-r-lg bg-gray-50 text-gray-500"
+                  >
+                    {showPassword ? (
+                      <IoMdEye size={24} />
+                    ) : (
+                      <IoMdEyeOff size={24} />
+                    )}
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <Link
+                    href="/user/recovery-password"
+                    className="text-sm font-medium text-green-550 hover:underline text-blue-500 mt-1"
+                  >
+                    Açar sözi unutdym
+                  </Link>
+                </div>
               </div>
 
               <div

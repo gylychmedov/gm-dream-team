@@ -34,6 +34,10 @@ export const navLinks: INavLink[] = [
         name: "for_grantors",
         route: "/grantors",
       },
+      {
+        name: "hire_a_grant_writer",
+        route: "/hire_a_grant_writer",
+      },
     ],
   },
 

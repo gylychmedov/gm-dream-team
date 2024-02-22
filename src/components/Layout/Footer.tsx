@@ -1,9 +1,7 @@
 import { navLinks } from "@/assets/data/navLinks";
 import Link from "next/link";
-import { AiFillInstagram } from "react-icons/ai";
-import { BsFacebook } from "react-icons/bs";
-import { FaWhatsappSquare } from "react-icons/fa";
 import useTranslation from "next-translate/useTranslation";
+import { socialLinks } from "@/assets/data/socialLinks";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -66,32 +64,22 @@ const Footer = () => {
                 {t("common:social_links")}
               </p>
 
-              <nav className="mt-8 flex gap-6 ">
-                <a
-                  href="https://www.instagram.com/p/CuMwFvfNn1w/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
-                  rel="noreferrer"
-                  target="_blank"
-                  className="hover:opacity-75"
-                >
-                  <AiFillInstagram size={24} />
-                </a>
-
-                <a
-                  href="https://facebook.com/groups/1835378983543572/"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="hover:opacity-75"
-                >
-                  <BsFacebook size={24} />
-                </a>
-                <a
-                  href="https://wa.me/qr/W3G72LWM3UBNP1"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="hover:opacity-75"
-                >
-                  <FaWhatsappSquare size={24} />
-                </a>
+              <nav className="mt-8 flex gap-x-3 ">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.link}
+                    rel="noreferrer"
+                    target="_blank"
+                    className="hover:opacity-75"
+                  >
+                    <img
+                      src={`/images/social_icons/${social.name}.svg`}
+                      className="w-7"
+                      alt=""
+                    />
+                  </a>
+                ))}
               </nav>
             </div>
           </div>

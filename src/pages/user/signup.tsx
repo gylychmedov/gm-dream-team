@@ -5,9 +5,11 @@ import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 import { ChangeEvent, useState } from "react";
 import { toast } from "react-hot-toast";
+import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 
 const Signup = () => {
   const { t } = useTranslation("user");
+  const [showPassword, setShowPassword] = useState(false);
 
   const [userData, setUserData] = useState({
     email: "",
@@ -119,15 +121,27 @@ const Signup = () => {
                 >
                   {t("password")}
                 </label>
-                <input
-                  value={userData.password}
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="••••••••"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg  focus:border-primary-600 block w-full p-2.5 "
-                  required
-                />
+                <div className="relative">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    value={userData.password}
+                    name="password"
+                    id="password"
+                    placeholder="••••••••"
+                    className="bg-gray-50 pr-12 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:border-primary-600 block w-full p-2.5 "
+                    required
+                  />{" "}
+                  <div
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute top-0.5 bottom-0.5 right-0.5  px-2 min-w-[48px] -ml-0.5 flex items-center rounded-r-lg bg-gray-50 text-gray-500"
+                  >
+                    {showPassword ? (
+                      <IoMdEye size={24} />
+                    ) : (
+                      <IoMdEyeOff size={24} />
+                    )}
+                  </div>
+                </div>
               </div>
               <div>
                 <label
@@ -136,15 +150,27 @@ const Signup = () => {
                 >
                   {t("confirm_password")}
                 </label>
-                <input
-                  value={userData.password_confirm}
-                  type="password"
-                  name="password_confirm"
-                  id="password_confirm"
-                  placeholder="••••••••"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:border-primary-600 block w-full p-2.5 "
-                  required
-                />
+                <div className="relative">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    value={userData.password_confirm}
+                    name="password_confirm"
+                    id="password_confirm"
+                    placeholder="••••••••"
+                    className="bg-gray-50 pr-12 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:border-primary-600 block w-full p-2.5 "
+                    required
+                  />{" "}
+                  <div
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute top-0.5 bottom-0.5 right-0.5  px-2 min-w-[48px] -ml-0.5 flex items-center rounded-r-lg bg-gray-50 text-gray-500"
+                  >
+                    {showPassword ? (
+                      <IoMdEye size={24} />
+                    ) : (
+                      <IoMdEyeOff size={24} />
+                    )}
+                  </div>
+                </div>
               </div>
 
               <div

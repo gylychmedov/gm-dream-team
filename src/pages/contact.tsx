@@ -129,12 +129,7 @@ const ContactPage = () => {
             type="email"
             placeholder={`${t("email")}*`}
           />
-          {/* <input
-            required
-            className="input"
-            name="phone"
-            placeholder={t("phone")}
-          /> */}
+
           <input
             value={formData.subject}
             required
