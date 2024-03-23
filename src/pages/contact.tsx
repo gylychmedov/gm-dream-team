@@ -70,11 +70,11 @@ const ContactPage = () => {
               {t("email_us")}
             </h2>
             <a
-              href="mailto:admin@gm-dream.team"
+              href="mailto:founder@gm-dream.team"
               target="_blank"
               className="text-gray-600 w-full text-center break-words"
             >
-              admin@gm-dream.team
+              founder@gm-dream.team
             </a>
           </aside>
           <aside className="bg-white flex-center px-4 py-6 lg:p-10 flex-col rounded-lg shadow-xl shadow-gray-100 group-hover:blur hover:!blur-0 group-hover:scale-90 hover:!scale-110 duration-500 cursor-default">
