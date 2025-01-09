@@ -7,4 +7,5 @@ export interface ILesson {
   image: string;
   video: string | null;
   coures_title: ILang;
+  position: number | null;
 }

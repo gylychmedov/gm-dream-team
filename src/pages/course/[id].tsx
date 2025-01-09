@@ -144,14 +144,18 @@ const CoursePage = () => {
       {detail && (
         <section className="col-span-12 lg:col-span-4 space-y-3 h-full overflow-y-auto">
           {detail.lessons.length > 0 &&
-            detail.lessons.map((lesson) => (
-              <Lesson
-                key={lesson.id}
-                lesson={lesson}
-                active={active?.lesson.id == lesson.id}
-                onClick={handleSelect}
-              />
-            ))}
+            [...detail.lessons]
+              .sort(
+                (a, b) => (a.position ?? Infinity) - (b.position ?? Infinity)
+              )
+              .map((lesson) => (
+                <Lesson
+                  key={lesson.id}
+                  lesson={lesson}
+                  active={active?.lesson.id == lesson.id}
+                  onClick={handleSelect}
+                />
+              ))}
         </section>
       )}
     </Layout>
